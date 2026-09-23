@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="CapitalForge Finance Client Login — Secure authentication portal for business financing and commercial loans.">
+  <title>Client Sign In | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-body">
+
+  <!-- Top Right Corner Controls (RTL & Theme) -->
+  <div class="auth-top-controls">
+    <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+    <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
+
+  <!-- Auth Card Container -->
+  <div class="auth-page-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5 col-xl-4">
+
+          <div class="p-4 p-sm-5 rounded-4 border bg-surface shadow-sm">
+
+            <!-- Brand Logo Inside Box Top Center -->
+            <div class="text-center mb-3">
+              <a class="navbar-brand-logo d-inline-flex align-items-center justify-content-center" href="index.html">
+                <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+                  <rect width="40" height="40" rx="10" fill="#0B192C" />
+                  <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="20" cy="13" r="2.5" fill="#F59E0B" />
+                </svg>
+                <span>CAPITAL<span class="text-primary">FORGE</span></span>
+              </a>
+            </div>
+
+            <div class="text-center mb-4">
+              <h2 class="fw-bold font-heading mb-1">Account Sign In</h2>
+              <p class="small text-muted mb-0">Enter your credentials to access your commercial account.</p>
+            </div>
+
+            <!-- Status Alert Box -->
+            <div class="auth-status-alert d-none mb-3"></div>
+
+            <form class="cf-login-form needs-validation" novalidate>
+
+              <!-- Input Field 1: Commercial Email (Separate Line) -->
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Commercial Email</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="officer@company.com" required>
+                </div>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Input Field 2: Password (Separate Line) -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <label for="loginPassword" class="form-label mb-0">Password</label>
+                  <a href="forgot-password.html" class="small text-decoration-none">Forgot password?</a>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Please enter your password.</div>
+              </div>
+
+              <!-- Remember Me -->
+              <div class="form-check mb-4 small">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label text-muted" for="rememberMe">
+                  Remember me
+                </label>
+              </div>
+
+              <!-- Sign In Button -->
+              <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+              </button>
+
+              <!-- Social Logins (Google & Apple) in Bottom -->
+              <div class="d-flex align-items-center my-3">
+                <hr class="flex-grow-1 opacity-25 m-0">
+                <span class="px-2 small text-muted">or continue with</span>
+                <hr class="flex-grow-1 opacity-25 m-0">
+              </div>
+
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <button type="button"
+                    class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2 small">
+                    <i class="bi bi-google text-danger"></i> Google
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button"
+                    class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2 small">
+                    <i class="bi bi-apple"></i> Apple
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-center small text-muted">
+                Don't have an enterprise account? <a href="signup.html" class="fw-semibold">Create an Account</a>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapitalForge Finance Digital Borrower Portal — Launching Soon. Register for early access to automated term sheets and digital doc management.">
+  <title>Digital Borrower Portal Launching Soon | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Top Minimal Bar -->
+  <header class="py-3 border-bottom bg-surface">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+        <button class="theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="contact.html" class="btn btn-outline-custom btn-sm">Contact Advisory</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Countdown Stage -->
+  <main class="flex-grow-1 d-flex align-items-center py-5 bg-subtle">
+    <div class="container text-center py-5">
+      <div class="max-w-700 mx-auto" style="max-width: 680px;">
+        
+        <span class="badge-tag tag-teal mb-3">Enterprise Portal Expansion</span>
+        <h1 class="display-5 fw-bold mb-3 font-heading">Digital Borrower Portal Launching Soon</h1>
+        <p class="lead text-muted mb-5">
+          We are finalizing our secure client environment, enabling commercial borrowers to track underwriting milestones, upload financial packages, and execute lender agreements in real time.
+        </p>
+
+        <!-- Live Countdown Timer (Driven by assets/js/main.js) -->
+        <div class="cf-countdown-timer d-flex justify-content-center gap-2 gap-sm-4 mb-5">
+          <div class="p-3 p-sm-4 bg-surface rounded-4 border shadow-sm" style="min-width: 90px;">
+            <div class="display-6 font-heading fw-bold text-primary count-days">45</div>
+            <div class="small text-muted text-uppercase fw-semibold" style="font-size: 0.75rem;">Days</div>
+          </div>
+          <div class="p-3 p-sm-4 bg-surface rounded-4 border shadow-sm" style="min-width: 90px;">
+            <div class="display-6 font-heading fw-bold text-primary count-hours">14</div>
+            <div class="small text-muted text-uppercase fw-semibold" style="font-size: 0.75rem;">Hours</div>
+          </div>
+          <div class="p-3 p-sm-4 bg-surface rounded-4 border shadow-sm" style="min-width: 90px;">
+            <div class="display-6 font-heading fw-bold text-primary count-minutes">28</div>
+            <div class="small text-muted text-uppercase fw-semibold" style="font-size: 0.75rem;">Minutes</div>
+          </div>
+          <div class="p-3 p-sm-4 bg-surface rounded-4 border shadow-sm" style="min-width: 90px;">
+            <div class="display-6 font-heading fw-bold text-primary count-seconds">52</div>
+            <div class="small text-muted text-uppercase fw-semibold" style="font-size: 0.75rem;">Seconds</div>
+          </div>
+        </div>
+
+        <!-- Notify Email Signup Form -->
+        <div class="p-4 rounded-4 border bg-surface shadow-sm mb-4">
+          <h5 class="fw-bold mb-2">Be Notified Upon Portal Release</h5>
+          <p class="small text-muted mb-3">Submit your business email to receive early access documentation.</p>
+          
+          <form onsubmit="event.preventDefault(); this.querySelector('.notify-alert').classList.remove('d-none'); this.querySelector('input').value='';" class="row g-2 justify-content-center">
+            <div class="col-sm-8">
+              <input type="email" class="form-control" placeholder="Enter corporate email..." required>
+            </div>
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-bell me-1"></i> Notify Me
+              </button>
+            </div>
+            <div class="col-12 notify-alert alert alert-success d-none mt-3 mb-0 small">
+              <i class="bi bi-check-circle me-1"></i> Thank you! Your email has been added to the portal notification queue.
+            </div>
+          </form>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="index.html" class="btn btn-outline-custom">Return to Main Website</a>
+          <a href="contact.html" class="btn btn-primary">Speak With a Broker Today</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-3 border-top text-center small" style="background-color: #ffffff !important; color: #475569 !important;">
+    <div class="container">
+      &copy; 2026 CapitalForge Finance. Commercial Financing Brokerage Demo.
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

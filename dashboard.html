@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="CapitalForge Finance Client Dashboard — Manage business loan applications, track approval stages, upload financial documents, compare lender offers, and manage repayment schedules.">
+  <title>Client Portal & Loan Dashboard | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-body">
+
+  <!-- ======================================================================
+       MOBILE RESPONSIVE TOPBAR (<=1024px)
+       ====================================================================== -->
+  <div
+    class="w-100 p-3 bg-surface border-bottom align-items-center justify-content-between sticky-top z-3 dash-mobile-topbar">
+    <a class="navbar-brand-logo" href="index.html">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none" class="me-1">
+        <rect width="40" height="40" rx="10" fill="#0B192C" />
+        <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <circle cx="20" cy="13" r="2.5" fill="#F59E0B" />
+      </svg>
+      <span>CAPITAL<span class="text-primary">FORGE</span></span>
+    </a>
+    <div>
+      <button class="btn btn-outline-custom p-2 btn-hamburger" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidebarOffcanvas" aria-label="Open Menu">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Sidebar Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="30" height="30" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C" />
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B" />
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <!-- Mobile Client Profile Mini-Widget -->
+    <div class="p-3 mx-3 my-3 rounded-3 bg-subtle border">
+      <div class="d-flex align-items-center gap-2">
+        <div
+          class="rounded-circle bg-primary bg-opacity-10 text-primary p-2 d-flex align-items-center justify-content-center"
+          style="width: 40px; height: 40px;">
+          <i class="bi bi-building fs-5"></i>
+        </div>
+        <div class="overflow-hidden">
+          <strong class="d-block text-heading text-truncate small">Apex Dynamics LLC</strong>
+          <span class="small text-success d-block" style="font-size: 0.75rem;">
+            <i class="bi bi-shield-fill-check me-1"></i>Tier 1 Enterprise
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3 pt-0">
+      <nav class="flex-grow-1">
+        <div class="small text-uppercase text-muted fw-bold px-2 mb-2"
+          style="font-size: 0.72rem; letter-spacing: 0.05em;">
+          Financing Menu
+        </div>
+        <ul class="nav flex-column gap-1 dash-nav-pills p-0 bg-transparent border-0 shadow-none">
+          <li class="nav-item">
+            <a class="nav-link active" data-dash-target="#tab-overview" href="#tab-overview"
+              data-bs-dismiss="offcanvas">
+              <i class="bi bi-grid-fill me-2 text-primary"></i> Overview & Status
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-dash-target="#tab-application" href="#tab-application" data-bs-dismiss="offcanvas">
+              <i class="bi bi-file-earmark-plus-fill me-2 text-primary"></i> Submit Application
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-dash-target="#tab-documents"
+              href="#tab-documents" data-bs-dismiss="offcanvas">
+              <span><i class="bi bi-folder-check me-2 text-primary"></i> Financial Documents</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-dash-target="#tab-offers"
+              href="#tab-offers" data-bs-dismiss="offcanvas">
+              <span><i class="bi bi-award-fill me-2 text-primary"></i> Lender Offers</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-dash-target="#tab-repayment" href="#tab-repayment" data-bs-dismiss="offcanvas">
+              <i class="bi bi-calendar3 me-2 text-primary"></i> Repayment Schedule
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="p-3 border-top mt-auto">
+        <div class="d-flex align-items-center justify-content-between mb-3 px-1">
+          <span class="small text-muted">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+        <a href="login.html"
+          class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2">
+          <i class="bi bi-box-arrow-right"></i> Log Out
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-layout-container">
+
+    <!-- ======================================================================
+         SIDE MENU (LEFT SIDE, FROM TOP TO BOTTOM)
+         ====================================================================== -->
+    <aside class="dash-sidebar" id="dashboardSidebar">
+
+      <!-- Top Brand Logo (in same place at top-left) -->
+      <div class="dash-sidebar-header p-4 border-bottom">
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C" />
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B" />
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+      </div>
+
+      <!-- Client Profile Mini-Widget -->
+      <div class="p-3 mx-3 my-3 rounded-3 bg-subtle border">
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="rounded-circle bg-primary bg-opacity-10 text-primary p-2 d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px;">
+            <i class="bi bi-building fs-5"></i>
+          </div>
+          <div class="overflow-hidden">
+            <strong class="d-block text-heading text-truncate small">Apex Dynamics LLC</strong>
+            <span class="small text-success d-block" style="font-size: 0.75rem;">
+              <i class="bi bi-shield-fill-check me-1"></i>Tier 1 Enterprise
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Navigation Menu -->
+      <nav class="dash-sidebar-nav px-3 flex-grow-1">
+        <div class="small text-uppercase text-muted fw-bold px-3 mb-2"
+          style="font-size: 0.72rem; letter-spacing: 0.05em;">
+          Financing Menu
+        </div>
+
+        <ul class="nav flex-column gap-1 dash-nav-pills p-0 bg-transparent border-0 shadow-none">
+          <li class="nav-item">
+            <a class="nav-link active" data-dash-target="#tab-overview" href="#tab-overview">
+              <i class="bi bi-grid-fill me-2 text-primary"></i> Overview & Status
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-dash-target="#tab-application" href="#tab-application">
+              <i class="bi bi-file-earmark-plus-fill me-2 text-primary"></i> Submit Application
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-dash-target="#tab-documents"
+              href="#tab-documents">
+              <span><i class="bi bi-folder-check me-2 text-primary"></i> Financial Documents</span>
+              <span class="badge bg-primary rounded-pill">4</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-dash-target="#tab-offers"
+              href="#tab-offers">
+              <span><i class="bi bi-award-fill me-2 text-primary"></i> Lender Offers</span>
+              <span class="badge bg-success rounded-pill">3</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-dash-target="#tab-repayment" href="#tab-repayment">
+              <i class="bi bi-calendar3 me-2 text-primary"></i> Repayment Schedule
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar Bottom: Controls & Logout Button -->
+      <div class="dash-sidebar-footer p-3 border-top mt-auto">
+        <div class="d-flex align-items-center justify-content-between mb-3 px-1">
+          <span class="small text-muted">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <a href="login.html"
+          class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2">
+          <i class="bi bi-box-arrow-right"></i> Log Out
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- ======================================================================
+         MAIN CONTENT AREA (TAKES REMAINING WIDTH ON RIGHT)
+         ====================================================================== -->
+    <main class="dash-main-wrap">
+
+      <!-- Top Client Greeting Banner -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 pb-3 border-bottom">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+            <h1 class="h3 fw-bold text-heading mb-0">Business Client Dashboard</h1>
+            <span
+              class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 rounded-pill small">
+              <i class="bi bi-check-circle-fill me-1"></i> Connected
+            </span>
+          </div>
+          <p class="text-muted small mb-0">Account #CF-84920 &bull; Apex Dynamics LLC &bull; Dedicated Advisor:
+            <strong>Marcus Vance</strong>
+          </p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 dash-top-actions">
+          <button class="btn btn-primary" data-dash-target="#tab-application">
+            <i class="bi bi-plus-circle me-1"></i> New Application
+          </button>
+          <button class="btn btn-outline-custom" data-dash-target="#tab-documents">
+            <i class="bi bi-cloud-arrow-up me-1"></i> Upload Financials
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI METRIC CARDS (ROW OF 4) -->
+      <div class="row g-3 g-md-4 mb-4 mb-md-5">
+        <div class="col-sm-6 col-xl-3">
+          <div class="dash-metric-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="small text-muted text-uppercase fw-semibold d-block mb-1">Active Facility</span>
+                <h3 class="h2 fw-bold text-heading mb-0 num-tabular">$450,000</h3>
+              </div>
+              <div class="dash-metric-icon bg-primary bg-opacity-10 text-primary">
+                <i class="bi bi-buildings"></i>
+              </div>
+            </div>
+            <hr class="my-3 opacity-25">
+            <div class="small d-flex justify-content-between text-muted">
+              <span>Term: 48 Mos @ 5.75%</span>
+              <span class="text-success"><i class="bi bi-check-circle-fill me-1"></i>Good Standing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="dash-metric-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="small text-muted text-uppercase fw-semibold d-block mb-1">Available Credit</span>
+                <h3 class="h2 fw-bold text-heading mb-0 num-tabular">$175,000</h3>
+              </div>
+              <div class="dash-metric-icon bg-info bg-opacity-10 text-info">
+                <i class="bi bi-wallet2"></i>
+              </div>
+            </div>
+            <hr class="my-3 opacity-25">
+            <div class="small d-flex justify-content-between text-muted">
+              <span>Revolving Line Capacity</span>
+              <span class="text-primary fw-semibold">Ready to Draw</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="dash-metric-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="small text-muted text-uppercase fw-semibold d-block mb-1">Next Payment Due</span>
+                <h3 class="h2 fw-bold text-heading mb-0 num-tabular">$4,820.00</h3>
+              </div>
+              <div class="dash-metric-icon bg-warning bg-opacity-10 text-warning">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+            </div>
+            <hr class="my-3 opacity-25">
+            <div class="small d-flex justify-content-between text-muted">
+              <span>Due: Oct 15, 2026</span>
+              <span class="text-success"><i class="bi bi-arrow-repeat me-1"></i>ACH Auto-Pay</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="dash-metric-card">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="small text-muted text-uppercase fw-semibold d-block mb-1">Application Pipeline</span>
+                <h3 class="h2 fw-bold text-heading mb-0">Stage 3 of 5</h3>
+              </div>
+              <div class="dash-metric-icon bg-success bg-opacity-10 text-success">
+                <i class="bi bi-activity"></i>
+              </div>
+            </div>
+            <hr class="my-3 opacity-25">
+            <div class="small d-flex justify-content-between text-muted">
+              <span>#CF-APP-2026-904</span>
+              <span class="text-warning fw-semibold">Underwriting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           MODULE 1: OVERVIEW & APPROVAL STATUS (PIPELINE STEPPER)
+           ====================================================================== -->
+      <div class="dash-pane active" id="tab-overview">
+
+        <!-- Pipeline Card -->
+        <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 p-md-5 mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-2">
+            <div>
+              <span
+                class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-3 py-1 rounded-pill small mb-2">Active
+                Facility Request</span>
+              <h3 class="h4 fw-bold text-heading mb-1">Haas CNC Vertical Machining Centers Financing</h3>
+              <p class="text-muted small mb-0">Application ID: <strong>#CF-APP-2026-904</strong> &bull; Requested:
+                <strong>$280,000</strong> &bull; Term: <strong>48 Months</strong>
+              </p>
+            </div>
+            <div class="text-start text-sm-end">
+              <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fs-6 fw-bold">
+                <i class="bi bi-hourglass-split me-1"></i> Underwriting Review
+              </span>
+            </div>
+          </div>
+
+          <!-- 5-Stage Stepper -->
+          <div class="small text-muted d-md-none text-center mt-3 mb-1">
+            <i class="bi bi-arrows-expand-vertical-or-horizontal me-1"></i> Swipe horizontally to view 5-stage pipeline
+          </div>
+          <div class="dash-pipeline-wrapper">
+            <div class="dash-pipeline my-3 my-md-4">
+              <div class="dash-pipeline-progress"></div>
+
+              <div class="dash-stage-node completed">
+                <div class="dash-stage-circle">
+                  <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="dash-stage-title">1. Submitted</div>
+                <div class="dash-stage-subtitle">Sep 18, 2026</div>
+              </div>
+
+              <div class="dash-stage-node completed">
+                <div class="dash-stage-circle">
+                  <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="dash-stage-title">2. Document Check</div>
+                <div class="dash-stage-subtitle">Sep 20, 2026</div>
+              </div>
+
+              <div class="dash-stage-node current">
+                <div class="dash-stage-circle">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div class="dash-stage-title text-primary">3. Underwriting</div>
+                <div class="dash-stage-subtitle fw-semibold text-primary">In Review (Est. 24h)</div>
+              </div>
+
+              <div class="dash-stage-node">
+                <div class="dash-stage-circle">4</div>
+                <div class="dash-stage-title">4. Lender Offers</div>
+                <div class="dash-stage-subtitle">Ready to Compare</div>
+              </div>
+
+              <div class="dash-stage-node">
+                <div class="dash-stage-circle">5</div>
+                <div class="dash-stage-title">5. Wire & Funding</div>
+                <div class="dash-stage-subtitle">Closing & Payout</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipeline Callout -->
+          <div
+            class="p-3 rounded-3 bg-subtle border mt-2 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-2 rounded-circle bg-primary bg-opacity-10 text-primary fs-4 flex-shrink-0">
+                <i class="bi bi-info-circle-fill"></i>
+              </div>
+              <div>
+                <strong class="d-block text-heading">Stage 3 Note from Senior Underwriter</strong>
+                <span class="small text-muted">"Bank statements and equipment proforma verified. Currently structuring
+                  credit committee approval with 3 competing lending partners."</span>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-outline-custom btn-sm w-100 w-md-auto text-nowrap" data-dash-target="#tab-offers">
+                Preview Lender Offers <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-md-4">
+          <!-- Left: Assigned Commercial Broker -->
+          <div class="col-12 col-xl-5">
+            <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 h-100">
+              <h4 class="h5 fw-bold text-heading mb-3">Assigned Financing Advisor</h4>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                  alt="Marcus Vance" class="rounded-circle object-fit-cover" width="64" height="64">
+                <div>
+                  <h5 class="mb-0 fw-bold text-heading">Marcus Vance</h5>
+                  <span class="text-primary small fw-semibold">VP Commercial Equipment Financing</span>
+                  <div class="small text-muted mt-1"><i class="bi bi-shield-check text-success me-1"></i> CapitalForge
+                    Senior Partner</div>
+                </div>
+              </div>
+
+              <ul class="list-unstyled small text-muted mb-4">
+                <li class="mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> (800) 555-0199 ext. 204</li>
+                <li class="mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> m.vance@capitalforgefinance.demo
+                </li>
+                <li class="mb-2"><i class="bi bi-clock-fill text-primary me-2"></i> Direct Desk Hours: 8:00 AM – 6:00 PM
+                  EST</li>
+              </ul>
+
+              <div class="d-grid gap-2 mt-auto">
+                <a href="contact.html" class="btn btn-outline-custom btn-sm">
+                  <i class="bi bi-chat-left-dots me-1"></i> Message Broker
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Audit Timeline & Milestones -->
+          <div class="col-12 col-xl-7">
+            <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 h-100">
+              <h4 class="h5 fw-bold text-heading mb-3">Recent Activity & Audit Trail</h4>
+
+              <div class="timeline-stream small">
+                <div class="d-flex gap-3 mb-3">
+                  <div class="text-primary fs-5"><i class="bi bi-check2-circle"></i></div>
+                  <div>
+                    <strong class="text-heading d-block">Haas Machine Proforma Verified</strong>
+                    <span class="text-muted">Vendor invoice of $280,000 accepted and verified by credit desk.</span>
+                    <div class="text-muted fst-italic mt-1">Today at 10:15 AM</div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 mb-3">
+                  <div class="text-success fs-5"><i class="bi bi-file-earmark-check"></i></div>
+                  <div>
+                    <strong class="text-heading d-block">Corporate Tax Returns Document Cleared</strong>
+                    <span class="text-muted">2024 & 2025 Form 1120-S verified by underwriting team.</span>
+                    <div class="text-muted fst-italic mt-1">Yesterday at 3:45 PM</div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                  <div class="text-info fs-5"><i class="bi bi-send-check"></i></div>
+                  <div>
+                    <strong class="text-heading d-block">Application #CF-APP-2026-904 Submitted</strong>
+                    <span class="text-muted">Online application received with initial equipment parameters.</span>
+                    <div class="text-muted fst-italic mt-1">Sep 18, 2026 at 11:20 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================================================
+           MODULE 2: SUBMIT APPLICATION
+           ====================================================================== -->
+      <div class="dash-pane d-none" id="tab-application">
+        <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 p-md-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+              <div class="text-center mb-4">
+                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill small mb-2">New Facility
+                  Request</span>
+                <h2 class="h3 fw-bold text-heading">Commercial Financing Application Wizard</h2>
+                <p class="text-muted small">Complete the form below to submit a formal financing request directly to our
+                  credit review committee. No hard credit pull for pre-qualification.</p>
+              </div>
+
+              <!-- Success Alert Banner (Hidden initially) -->
+              <div class="alert alert-success d-none mb-4" id="dashAppSuccessAlert" role="alert">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill fs-3 text-success"></i>
+                  <div>
+                    <h5 class="alert-heading fw-bold mb-1">Application Successfully Submitted!</h5>
+                    <p class="mb-0 small">Your application has been assigned tracking ID
+                      <strong>#CF-APP-2026-905</strong>. An underwriter will review your submission and contact you
+                      within 2 to 4 business hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <form id="dashLoanAppForm" class="needs-validation" novalidate>
+
+                <!-- Section 1: Business Profile -->
+                <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">
+                  <i class="bi bi-building me-2 text-primary"></i> 1. Business Profile
+                </h5>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="dashLegalName" class="form-label small fw-semibold">Legal Entity Name *</label>
+                    <input type="text" class="form-control" id="dashLegalName" value="Apex Dynamics LLC" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dashTaxId" class="form-label small fw-semibold">Federal Tax ID (EIN) *</label>
+                    <input type="text" class="form-control" id="dashTaxId" value="XX-XXX9281" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dashAnnualRevenue" class="form-label small fw-semibold">Annual Gross Revenue ($)
+                      *</label>
+                    <input type="number" class="form-control" id="dashAnnualRevenue" value="3850000"
+                      placeholder="e.g. 3,500,000" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dashYearsOperating" class="form-label small fw-semibold">Years in Operation *</label>
+                    <select class="form-select" id="dashYearsOperating" required>
+                      <option value="5+ Years" selected>5+ Years Established</option>
+                      <option value="3-5 Years">3 to 5 Years</option>
+                      <option value="1-3 Years">1 to 3 Years</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dashIndustry" class="form-label small fw-semibold">Industry Sector *</label>
+                    <select class="form-select" id="dashIndustry" required>
+                      <option value="Precision Manufacturing" selected>Manufacturing & Machining</option>
+                      <option value="Construction">Construction & Earthmoving</option>
+                      <option value="Transportation">Transportation & Logistics</option>
+                      <option value="Medical">Medical & Healthcare</option>
+                      <option value="Other">Commercial / General</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Section 2: Facility Parameters -->
+                <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">
+                  <i class="bi bi-cash-stack me-2 text-primary"></i> 2. Financing Parameters
+                </h5>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-4">
+                    <label for="dashLoanProgram" class="form-label small fw-semibold">Funding Program *</label>
+                    <select class="form-select" id="dashLoanProgram" required>
+                      <option value="Equipment Financing" selected>Equipment Financing / Lease</option>
+                      <option value="Working Capital">Working Capital Term Loan</option>
+                      <option value="Business Line of Credit">Business Line of Credit</option>
+                      <option value="Commercial Expansion">Commercial Expansion Facility</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dashReqAmount" class="form-label small fw-semibold">Requested Amount ($) *</label>
+                    <input type="number" class="form-control" id="dashReqAmount" placeholder="e.g. 250000"
+                      value="280000" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dashPreferredTerm" class="form-label small fw-semibold">Preferred Term *</label>
+                    <select class="form-select" id="dashPreferredTerm" required>
+                      <option value="48 Months" selected>48 Months (4 Years)</option>
+                      <option value="36 Months">36 Months (3 Years)</option>
+                      <option value="60 Months">60 Months (5 Years)</option>
+                      <option value="72 Months">72 Months (6 Years)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Section 3: Equipment & Asset Details -->
+                <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">
+                  <i class="bi bi-tools me-2 text-primary"></i> 3. Equipment / Asset Specifications
+                </h5>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="dashEquipType" class="form-label small fw-semibold">Equipment Description /
+                      Model</label>
+                    <input type="text" class="form-control" id="dashEquipType"
+                      placeholder="e.g. 2026 Haas VF-4SS CNC Machine" value="Haas VF-4SS CNC Machining Center">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="dashVendorName" class="form-label small fw-semibold">Equipment Vendor / Dealer</label>
+                    <input type="text" class="form-control" id="dashVendorName" placeholder="e.g. Haas Factory Outlet"
+                      value="Haas Automation Outlet">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="dashEquipCondition" class="form-label small fw-semibold">Equipment Condition</label>
+                    <select class="form-select" id="dashEquipCondition">
+                      <option value="Brand New" selected>Brand New Equipment</option>
+                      <option value="Certified Pre-Owned">Certified Pre-Owned</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="dashLoanNotes" class="form-label small fw-semibold">Additional Narrative / Notes</label>
+                    <textarea class="form-control" id="dashLoanNotes" rows="3"
+                      placeholder="Explain the revenue impact, contracts, or expansion plans associated with this funding request.">Purchasing two new Haas machines to fulfill defense and aerospace contract awarded in Q3.</textarea>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-subtle rounded-3 border mb-4 small text-muted">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="dashCertifyCheck" required checked>
+                    <label class="form-check-label" for="dashCertifyCheck">
+                      I certify that I am an authorized corporate officer of the applicant business. I authorize
+                      CapitalForge Finance and its network of commercial lending partners to review business credit
+                      history to evaluate funding options.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-end gap-2">
+                  <button type="button" class="btn btn-outline-custom" data-dash-target="#tab-overview">Cancel</button>
+                  <button type="submit" class="btn btn-primary px-4">
+                    <i class="bi bi-send-fill me-1"></i> Submit Application to Underwriting
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           MODULE 3: FINANCIAL DOCUMENTS (4)
+           ====================================================================== -->
+      <div class="dash-pane d-none" id="tab-documents">
+        <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 p-md-5">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h3 class="h4 fw-bold text-heading mb-1">Financial Documents & Verification Vault</h3>
+              <p class="text-muted small mb-0">Upload bank statements, tax returns, and equipment invoices. All
+                documents are encrypted with AES-256 bank-level security.</p>
+            </div>
+            <div>
+              <span
+                class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill small">
+                <i class="bi bi-shield-lock-fill me-1"></i> SOC2 Type II Verified Vault
+              </span>
+            </div>
+          </div>
+
+          <!-- Drag and Drop Upload Zone -->
+          <div class="dash-dropzone mb-4" id="dashDocDropzone">
+            <input type="file" id="dashDocInput" class="d-none" accept=".pdf,.csv,.xlsx,.jpg,.png">
+            <i class="bi bi-cloud-arrow-up text-primary fs-1 mb-2 d-block"></i>
+            <h5 class="fw-bold text-heading mb-1">Drag and drop your financial files here, or click to browse</h5>
+            <p class="text-muted small mb-2">Supported formats: PDF, XLSX, CSV, JPG, PNG &bull; Max file size: 25MB per
+              document</p>
+            <button type="button" class="btn btn-sm btn-outline-custom mt-2">
+              <i class="bi bi-folder2-open me-1"></i> Select File from Computer
+            </button>
+          </div>
+
+          <!-- Upload Progress Bar (hidden by default) -->
+          <div class="progress mb-4 d-none" style="height: 6px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="dashDocProgressBar"
+              role="progressbar" style="width: 0%"></div>
+          </div>
+
+          <!-- Uploaded Documents Table -->
+          <h5 class="fw-bold text-heading mb-3">Required & Uploaded Documents</h5>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle border text-nowrap">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Document Title</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Underwriting Notes</th>
+                  <th scope="col" class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="dashDocTableBody">
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                      <div>
+                        <strong class="d-block text-heading">6 Months Operating Bank Statements (Chase)</strong>
+                        <span class="small text-muted">4.2 MB &bull; Uploaded Sep 18, 2026</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-success"><i class="bi bi-check-circle-fill me-1"></i> Verified</span></td>
+                  <td><span class="small text-muted">Average daily balance $142,500 verified.</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-custom p-1 px-2" title="Download"><i
+                        class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                      <div>
+                        <strong class="d-block text-heading">2024 & 2025 Corporate Tax Returns (Form 1120-S)</strong>
+                        <span class="small text-muted">8.9 MB &bull; Uploaded Sep 19, 2026</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-success"><i class="bi bi-check-circle-fill me-1"></i> Verified</span></td>
+                  <td><span class="small text-muted">Positive Net Operating Income verified.</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-custom p-1 px-2" title="Download"><i
+                        class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-file-earmark-text-fill text-primary fs-4"></i>
+                      <div>
+                        <strong class="d-block text-heading">Haas Factory Outlet Proforma Invoice #HFO-8812</strong>
+                        <span class="small text-muted">1.6 MB &bull; Uploaded Sep 20, 2026</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-warning text-dark"><i class="bi bi-hourglass-split me-1"></i> Under
+                      Review</span></td>
+                  <td><span class="small text-muted">Equipment specs & dealer discount verification.</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-custom p-1 px-2" title="Download"><i
+                        class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-file-earmark-excel-fill text-success fs-4"></i>
+                      <div>
+                        <strong class="d-block text-heading">YTD Interim Profit & Loss & Balance Sheet</strong>
+                        <span class="small text-muted">Required &bull; Pending Upload</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-secondary"><i class="bi bi-clock me-1"></i> Pending</span></td>
+                  <td><span class="small text-muted">Required before final funding wire can release.</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-primary p-1 px-2"
+                      onclick="document.getElementById('dashDocInput').click()"><i class="bi bi-upload me-1"></i>
+                      Upload</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           MODULE 4: LENDER OFFERS (3)
+           ====================================================================== -->
+      <div class="dash-pane d-none" id="tab-offers">
+        <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 p-md-5 mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill small mb-2">3 Competing
+                Offers Available</span>
+              <h3 class="h4 fw-bold text-heading mb-1">Funding Offer Comparison Matrix</h3>
+              <p class="text-muted small mb-0">Our broker team negotiated competing offers for <strong>Haas CNC
+                  Equipment Financing ($280,000)</strong>. Review rates, structures, and select your preferred facility.
+              </p>
+            </div>
+            <div>
+              <a href="contact.html" class="btn btn-outline-custom btn-sm">
+                <i class="bi bi-telephone me-1"></i> Discuss with Marcus Vance
+              </a>
+            </div>
+          </div>
+
+          <!-- Offers Grid -->
+          <div class="row g-3 g-md-4 mb-4">
+
+            <!-- Offer 1 (Recommended) -->
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="dash-offer-card recommended">
+                <span class="dash-offer-badge">Best Overall Value</span>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <i class="bi bi-shield-fill-check text-success fs-4"></i>
+                  <div>
+                    <h5 class="fw-bold text-heading mb-0">Crestline Capital</h5>
+                    <span class="small text-muted">Equipment Lease-to-Own</span>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-subtle rounded-3 mb-3 text-center">
+                  <span class="small text-muted d-block">Monthly Payment</span>
+                  <h3 class="h2 fw-bold text-primary mb-0 num-tabular">$6,540</h3>
+                  <span class="small text-success fw-semibold">48 Months @ 5.85% APR</span>
+                </div>
+
+                <ul class="list-unstyled small mb-4">
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Financed Amount:</span>
+                    <strong class="text-heading">$280,000</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Down Payment:</span>
+                    <strong class="text-success">$0 Down (100% Capital)</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Soft Costs Included:</span>
+                    <strong class="text-heading">Tooling & Freight</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Prepayment Penalty:</span>
+                    <strong class="text-success">None After Month 12</strong>
+                  </li>
+                  <li class="py-1 d-flex justify-content-between">
+                    <span class="text-muted">Estimated Funding:</span>
+                    <strong class="text-primary">24 – 48 Hours</strong>
+                  </li>
+                </ul>
+
+                <button class="btn btn-primary w-100 btn-accept-offer" data-lender="Crestline Capital"
+                  data-rate="5.85% Fixed Lease" data-amount="$280,000">
+                  <i class="bi bi-check2-circle me-1"></i> Accept This Offer
+                </button>
+              </div>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="dash-offer-card">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <i class="bi bi-buildings text-primary fs-4"></i>
+                  <div>
+                    <h5 class="fw-bold text-heading mb-0">Vanguard Commercial</h5>
+                    <span class="small text-muted">Extended Term Loan</span>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-subtle rounded-3 mb-3 text-center">
+                  <span class="small text-muted d-block">Monthly Payment</span>
+                  <h3 class="h2 fw-bold text-heading mb-0 num-tabular">$5,438</h3>
+                  <span class="small text-muted">60 Months @ 6.20% APR</span>
+                </div>
+
+                <ul class="list-unstyled small mb-4">
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Financed Amount:</span>
+                    <strong class="text-heading">$252,000</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Down Payment:</span>
+                    <strong class="text-heading">10% ($28,000)</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Soft Costs Included:</span>
+                    <strong class="text-muted">Equipment Only</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Prepayment Penalty:</span>
+                    <strong class="text-muted">1% Flat</strong>
+                  </li>
+                  <li class="py-1 d-flex justify-content-between">
+                    <span class="text-muted">Estimated Funding:</span>
+                    <strong class="text-heading">3 Business Days</strong>
+                  </li>
+                </ul>
+
+                <button class="btn btn-outline-custom w-100 btn-accept-offer" data-lender="Vanguard Commercial"
+                  data-rate="6.20% Term Loan" data-amount="$252,000">
+                  Select This Offer
+                </button>
+              </div>
+            </div>
+
+            <!-- Offer 3 -->
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="dash-offer-card">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <i class="bi bi-bank text-info fs-4"></i>
+                  <div>
+                    <h5 class="fw-bold text-heading mb-0">Apex Meridian Bank</h5>
+                    <span class="small text-muted">Secured Revolving Line</span>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-subtle rounded-3 mb-3 text-center">
+                  <span class="small text-muted d-block">Monthly Payment (Est.)</span>
+                  <h3 class="h2 fw-bold text-heading mb-0 num-tabular">$6,610</h3>
+                  <span class="small text-muted">48 Months @ 6.45% Prime</span>
+                </div>
+
+                <ul class="list-unstyled small mb-4">
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Financed Amount:</span>
+                    <strong class="text-heading">$280,000</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Down Payment:</span>
+                    <strong class="text-success">$0 Down</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Soft Costs Included:</span>
+                    <strong class="text-heading">Yes (Flexible)</strong>
+                  </li>
+                  <li class="py-1 border-bottom d-flex justify-content-between">
+                    <span class="text-muted">Prepayment Penalty:</span>
+                    <strong class="text-success">Zero Penalty</strong>
+                  </li>
+                  <li class="py-1 d-flex justify-content-between">
+                    <span class="text-muted">Estimated Funding:</span>
+                    <strong class="text-heading">2 – 4 Days</strong>
+                  </li>
+                </ul>
+
+                <button class="btn btn-outline-custom w-100 btn-accept-offer" data-lender="Apex Meridian Bank"
+                  data-rate="6.45% Revolving Line" data-amount="$280,000">
+                  Select This Offer
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Broker Disclaimer -->
+          <div class="small text-muted p-3 bg-subtle rounded-3 border">
+            <strong>Lender Rate Guarantee:</strong> Term sheets and conditional offers are subject to final lender
+            credit approval, underwriting verification of current interim financials, and execution of closing
+            documentation.
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           MODULE 5: REPAYMENT SCHEDULE
+           ====================================================================== -->
+      <div class="dash-pane d-none" id="tab-repayment">
+        <div class="card border bg-surface rounded-4 shadow-sm p-3 p-sm-4 p-md-5">
+
+          <!-- Repayment Overview Header -->
+          <div class="row align-items-center g-4 mb-4 pb-3 border-bottom">
+            <div class="col-lg-7">
+              <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill small mb-2">Active
+                Amortization Facility</span>
+              <h3 class="h4 fw-bold text-heading mb-1">Equipment Facility #CF-EQ-7719 Repayment Schedule</h3>
+              <p class="text-muted small mb-0">Initial Loan: <strong>$350,000</strong> &bull; Remaining Principal:
+                <strong>$178,420.00</strong> &bull; Total Term: <strong>48 Months</strong>
+              </p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <div
+                class="d-flex d-sm-inline-flex justify-content-between align-items-center gap-3 p-3 bg-subtle rounded-3 border w-100 w-sm-auto">
+                <div class="text-start">
+                  <span class="small text-muted d-block">Automatic ACH Payment</span>
+                  <div class="small" id="dashAutopayStatus"><span class="text-success"><i
+                        class="bi bi-check-circle-fill me-1"></i> Active (ACH Direct Debit)</span></div>
+                </div>
+                <div class="form-check form-switch fs-4 mb-0">
+                  <input class="form-check-input" type="checkbox" id="dashAutopayToggle" checked>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next Payment Card & Quick Actions -->
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-subtle rounded-3 border">
+                <span class="small text-muted d-block">Next Scheduled Payment</span>
+                <h4 class="fw-bold text-heading mb-0 num-tabular">$4,820.00</h4>
+                <span class="small text-muted">Due: October 15, 2026</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-subtle rounded-3 border">
+                <span class="small text-muted d-block">Payment # Completed</span>
+                <h4 class="fw-bold text-heading mb-0 num-tabular">24 of 48</h4>
+                <span class="small text-success">50% Principal Amortized</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-subtle rounded-3 border d-flex flex-column justify-content-between">
+                <span class="small text-muted d-block">Linked Bank Account</span>
+                <strong class="text-heading">JPMorgan Chase &bull;&bull;&bull;&bull; 9014</strong>
+                <a href="#" class="small text-primary text-decoration-none">Change ACH Account</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h5 class="fw-bold text-heading mb-0">Monthly Amortization Ledger</h5>
+            <div class="d-flex gap-2 w-100 w-sm-auto">
+              <button class="btn btn-sm btn-outline-custom flex-grow-1 flex-sm-grow-0">
+                <i class="bi bi-file-earmark-arrow-down me-1"></i> Export CSV
+              </button>
+              <button class="btn btn-sm btn-outline-custom flex-grow-1 flex-sm-grow-0">
+                <i class="bi bi-printer me-1"></i> Print Schedule
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle border text-nowrap">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Payment #</th>
+                  <th scope="col">Due Date</th>
+                  <th scope="col">Principal</th>
+                  <th scope="col">Interest</th>
+                  <th scope="col">Total Payment</th>
+                  <th scope="col">Remaining Balance</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-light">
+                  <td><strong>#23</strong></td>
+                  <td>Aug 15, 2026</td>
+                  <td class="num-tabular">$3,948.10</td>
+                  <td class="num-tabular">$871.90</td>
+                  <td class="num-tabular fw-bold">$4,820.00</td>
+                  <td class="num-tabular text-muted">$182,389.20</td>
+                  <td><span class="badge bg-success"><i class="bi bi-check-lg me-1"></i> Paid</span></td>
+                </tr>
+
+                <tr class="table-light">
+                  <td><strong>#24</strong></td>
+                  <td>Sep 15, 2026</td>
+                  <td class="num-tabular">$3,969.20</td>
+                  <td class="num-tabular">$850.80</td>
+                  <td class="num-tabular fw-bold">$4,820.00</td>
+                  <td class="num-tabular text-muted">$178,420.00</td>
+                  <td><span class="badge bg-success"><i class="bi bi-check-lg me-1"></i> Paid</span></td>
+                </tr>
+
+                <tr class="table-primary table-opacity-10 fw-semibold">
+                  <td><strong>#25</strong></td>
+                  <td>Oct 15, 2026</td>
+                  <td class="num-tabular">$3,988.50</td>
+                  <td class="num-tabular">$831.50</td>
+                  <td class="num-tabular fw-bold text-primary">$4,820.00</td>
+                  <td class="num-tabular">$174,431.50</td>
+                  <td><span class="badge bg-warning text-dark"><i class="bi bi-clock me-1"></i> Upcoming (Auto
+                      ACH)</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>#26</strong></td>
+                  <td>Nov 15, 2026</td>
+                  <td class="num-tabular">$4,008.20</td>
+                  <td class="num-tabular">$811.80</td>
+                  <td class="num-tabular fw-bold">$4,820.00</td>
+                  <td class="num-tabular">$170,423.30</td>
+                  <td><span class="badge bg-secondary">Scheduled</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>#27</strong></td>
+                  <td>Dec 15, 2026</td>
+                  <td class="num-tabular">$4,028.10</td>
+                  <td class="num-tabular">$791.90</td>
+                  <td class="num-tabular fw-bold">$4,820.00</td>
+                  <td class="num-tabular">$166,395.20</td>
+                  <td><span class="badge bg-secondary">Scheduled</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>#28</strong></td>
+                  <td>Jan 15, 2027</td>
+                  <td class="num-tabular">$4,048.20</td>
+                  <td class="num-tabular">$771.80</td>
+                  <td class="num-tabular fw-bold">$4,820.00</td>
+                  <td class="num-tabular">$162,347.00</td>
+                  <td><span class="badge bg-secondary">Scheduled</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ACCEPT OFFER MODAL -->
+  <div class="modal fade" id="acceptOfferModal" tabindex="-1" aria-labelledby="acceptOfferModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title font-heading fw-bold" id="acceptOfferModalLabel">
+            <i class="bi bi-check2-circle text-success me-2"></i> Confirm Funding Acceptance
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="mb-2">You are selecting the commercial financing facility provided by:</p>
+          <div class="p-3 bg-subtle rounded-3 border mb-3">
+            <h4 class="h5 fw-bold text-heading mb-1" id="acceptOfferLender">Crestline Capital</h4>
+            <div class="small text-muted" id="acceptOfferDetails">Amount: $280,000 | Rate: 5.85% Fixed Lease</div>
+          </div>
+          <p class="small text-muted mb-0">
+            Upon confirmation, Marcus Vance will prepare the final closing documents for digital signature via DocuSign
+            and schedule the vendor equipment disbursement wire.
+          </p>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+            onclick="alert('Offer accepted! Your commercial advisor Marcus Vance has been notified and closing documents will be sent to your email.')">
+            Proceed to Digital Closing
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapitalForge Finance Client Registration — Create an enterprise account for commercial loan applications.">
+  <title>Create Enterprise Account | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-body">
+
+  <!-- Top Right Corner Controls (RTL & Theme) -->
+  <div class="auth-top-controls">
+    <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+    <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
+
+  <!-- Auth Card Container -->
+  <div class="auth-page-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-5">
+          
+          <div class="p-4 p-sm-5 rounded-4 border bg-surface shadow-sm">
+            
+            <!-- Brand Logo Inside Box Top Center -->
+            <div class="text-center mb-3">
+              <a class="navbar-brand-logo d-inline-flex align-items-center justify-content-center" href="index.html">
+                <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+                  <rect width="40" height="40" rx="10" fill="#0B192C"/>
+                  <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+                </svg>
+                <span>CAPITAL<span class="text-primary">FORGE</span></span>
+              </a>
+            </div>
+
+            <div class="text-center mb-4">
+              <h2 class="fw-bold font-heading mb-1">Create Enterprise Account</h2>
+              <p class="small text-muted mb-0">Set up credentials to track active commercial financing applications.</p>
+            </div>
+
+            <!-- Status Alert Box -->
+            <div class="auth-status-alert d-none mb-3"></div>
+
+            <form class="cf-signup-form needs-validation" novalidate>
+              
+              <!-- Input Field 1: Full Name (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupFullName" class="form-label">Full Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="signupFullName" placeholder="e.g. David Sterling" required>
+                </div>
+                <div class="invalid-feedback">Full name is required.</div>
+              </div>
+
+              <!-- Input Field 2: Business Legal Name (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupBusinessName" class="form-label">Business Legal Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-building"></i></span>
+                  <input type="text" class="form-control" id="signupBusinessName" placeholder="e.g. Sterling Logistics Inc." required>
+                </div>
+                <div class="invalid-feedback">Business name is required.</div>
+              </div>
+
+              <!-- Input Field 3: Business Email (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Business Email</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" id="signupEmail" placeholder="officer@company.com" required>
+                </div>
+                <div class="invalid-feedback">Please enter a valid business email.</div>
+              </div>
+
+              <!-- Input Field 4: Contact Phone (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupPhone" class="form-label">Contact Phone</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                  <input type="tel" class="form-control" id="signupPhone" placeholder="(555) 000-0000" pattern="[0-9\(\)\s\-\.\+]{7,20}" required>
+                </div>
+                <div class="invalid-feedback">Valid contact phone is required.</div>
+              </div>
+
+              <!-- Input Field 5: Password (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control" id="signupPassword" placeholder="At least 8 characters" minlength="8" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Password must be at least 8 characters.</div>
+              </div>
+
+              <!-- Input Field 6: Confirm Password (Separate Line) -->
+              <div class="mb-3">
+                <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+                  <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Re-enter password" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Passwords must match.</div>
+              </div>
+
+              <!-- Agree to Terms -->
+              <div class="form-check mb-4 small">
+                <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                <label class="form-check-label text-muted" for="agreeTerms">
+                  I agree to the <a href="#" class="text-decoration-none">Terms of Commercial Service</a> and acknowledge the <a href="#" class="text-decoration-none">Brokerage Privacy Policy</a>.
+                </label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+              </div>
+
+              <!-- Create Account Button -->
+              <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                <i class="bi bi-person-plus me-1"></i> Create Account
+              </button>
+
+              <!-- Social Logins (Google & Apple) in Bottom -->
+              <div class="d-flex align-items-center my-3">
+                <hr class="flex-grow-1 opacity-25 m-0">
+                <span class="px-2 small text-muted">or continue with</span>
+                <hr class="flex-grow-1 opacity-25 m-0">
+              </div>
+
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2 small">
+                    <i class="bi bi-google text-danger"></i> Google
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2 small">
+                    <i class="bi bi-apple"></i> Apple
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-center small text-muted">
+                Already have an account? <a href="login.html" class="fw-semibold">Sign In</a>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

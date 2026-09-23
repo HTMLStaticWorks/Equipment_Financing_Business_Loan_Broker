@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact CapitalForge Finance — Connect with our commercial financing advisory team to explore equipment financing, working capital, lines of credit, and commercial funding.">
+  <title>Contact &amp; Funding Consultation | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Mandatory Sticky Navbar -->
+      <header class="cf-header">
+    <nav class="navbar navbar-expand-xl py-3" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Controls: Only Hamburger Menu in Header (RTL, Theme & Sign Up inside Menu Drawer) -->
+        <div class="d-flex align-items-center d-xl-none ms-auto">
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-heading"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse d-none d-xl-flex">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
+              </ul>
+            </li>
+
+            <!-- Direct Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="financing.html">Financing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="loan-calculator.html">Loan Calculator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="funding-process.html">How It Works</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Area: RTL Toggle, Theme Toggle & Sign Up Button -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="signup.html" class="btn btn-primary btn-sm px-3">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Exact match to Navbar menus + All Controls inside) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="accordion accordion-flush" id="mobileNavAccordion">
+          
+          <!-- Home Accordion Item matching Home Dropdown -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileHome">
+              <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
+                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+              </button>
+            </h2>
+            <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
+              <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
+                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <div class="d-flex flex-column gap-1 pt-1">
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
+      <div class="pt-3 border-top mt-auto">
+        <div class="mb-3">
+          <a href="signup.html" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus"></i> Sign Up
+          </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-1">
+          <span class="small text-muted fw-semibold">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="py-5 bg-subtle border-bottom">
+    <div class="container py-3 text-center">
+      <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <h1 class="display-5 fw-bold mb-3">Connect With Our Financing Team</h1>
+      <p class="lead text-muted mx-auto" style="max-width: 760px;">
+        Speak directly with a commercial financing broker regarding upcoming equipment acquisitions, working capital
+        requirements, or revolving credit lines.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT & FORM SECTION -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+
+        <!-- Left: Contact Information Cards -->
+        <div class="col-lg-5">
+          <div class="p-4 rounded-4 border bg-surface mb-4">
+            <h4 class="fw-bold mb-3">Brokerage Headquarters</h4>
+            <p class="text-muted small mb-4">
+              Our advisory team is ready to evaluate your enterprise financing requirements across all 50 states.
+            </p>
+
+            <div class="d-flex flex-column gap-3 small">
+              <div class="d-flex align-items-start gap-3">
+                <div class="cf-card-icon m-0 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1.15rem;">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <strong class="d-block text-heading">Office Address</strong>
+                  <span class="text-muted">100 Financial Plaza, Suite 1400, New York, NY 10005</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="cf-card-icon icon-teal m-0 flex-shrink-0"
+                  style="width: 42px; height: 42px; font-size: 1.15rem;">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <strong class="d-block text-heading">Direct Advisory Line</strong>
+                  <span class="text-muted">(800) 555-0199</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="cf-card-icon icon-gold m-0 flex-shrink-0"
+                  style="width: 42px; height: 42px; font-size: 1.15rem;">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <strong class="d-block text-heading">Electronic Correspondence</strong>
+                  <span class="text-muted">info@capitalforgefinance.demo</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="cf-card-icon m-0 flex-shrink-0" style="width: 42px; height: 42px; font-size: 1.15rem;">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div>
+                  <strong class="d-block text-heading">Operating Hours</strong>
+                  <span class="text-muted">Monday &ndash; Friday: 8:00 AM &ndash; 6:00 PM EST</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+
+            <div>
+              <strong class="d-block text-heading mb-2">Connect On Social Media</strong>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-social-btn social-linkedin" aria-label="LinkedIn" title="Connect on LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-social-btn social-twitter" aria-label="X (Twitter)" title="Follow on X / Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-social-btn social-facebook" aria-label="Facebook" title="Follow on Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-social-btn social-youtube" aria-label="YouTube" title="Subscribe on YouTube">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-social-btn social-instagram" aria-label="Instagram" title="Follow on Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-4 border bg-subtle">
+            <h5 class="fw-bold mb-2"><i class="bi bi-shield-lock-fill text-primary me-2"></i> Confidentiality Guaranteed
+            </h5>
+            <p class="small text-muted mb-0">
+              Your business data, financial statements, and inquiries remain strictly confidential. We only submit
+              documentation to institutional funding partners with your prior consent.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form with Validation & Success State -->
+        <div class="col-lg-7">
+          <div class="p-4 p-md-5 rounded-4 border bg-surface shadow-sm">
+            <h3 class="fw-bold mb-2">Request a Funding Consultation</h3>
+            <p class="text-muted small mb-4">
+              Complete the details below to receive preliminary financing scenarios from our brokerage network.
+            </p>
+
+            <!-- Success State Banner (Managed by assets/js/main.js) -->
+            <div class="form-success-banner alert alert-success d-none mb-4 p-4 rounded-3" role="alert">
+              <h5 class="alert-heading fw-bold mb-1"><i class="bi bi-check-circle-fill me-2"></i> Inquiry Submitted
+                Successfully!</h5>
+              <p class="small mb-0">
+                Thank you. Your commercial financing inquiry has been logged in our system. A CapitalForge specialist
+                will contact your business within one business day.
+              </p>
+            </div>
+
+            <!-- Mandatory Fields Form with Bootstrap Validation -->
+            <form class="cf-consultation-form needs-validation" novalidate>
+              <div class="row g-3">
+
+                <!-- Full Name -->
+                <div class="col-md-6">
+                  <label for="contactFullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="contactFullName" placeholder="e.g. Sarah Jenkins"
+                    required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <!-- Business Name -->
+                <div class="col-md-6">
+                  <label for="contactBusinessName" class="form-label">Business Legal Name <span
+                      class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="contactBusinessName"
+                    placeholder="e.g. Apex Industrial LLC" required>
+                  <div class="invalid-feedback">Please enter your business name.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label">Business Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="name@company.com" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                  <label for="contactPhone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" id="contactPhone" placeholder="(555) 000-0000"
+                    pattern="[0-9\(\)\s\-\.\+]{7,20}" required>
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+
+                <!-- Funding Need Dropdown -->
+                <div class="col-md-6">
+                  <label for="contactFundingNeed" class="form-label">Primary Funding Need <span
+                      class="text-danger">*</span></label>
+                  <select class="form-select" id="contactFundingNeed" required>
+                    <option value="" selected disabled>Select financing category...</option>
+                    <option value="Equipment">Equipment Financing / Leasing</option>
+                    <option value="Working Capital">Working Capital &amp; Operations</option>
+                    <option value="Line of Credit">Business Line of Credit</option>
+                    <option value="Expansion">Business Expansion</option>
+                    <option value="Commercial Financing">Commercial Debt Facility ($250K+)</option>
+                    <option value="Other">Other Business Requirement</option>
+                  </select>
+                  <div class="invalid-feedback">Please select your primary funding need.</div>
+                </div>
+
+                <!-- Estimated Amount -->
+                <div class="col-md-6">
+                  <label for="contactAmount" class="form-label">Estimated Funding Amount <span
+                      class="text-danger">*</span></label>
+                  <select class="form-select" id="contactAmount" required>
+                    <option value="" selected disabled>Select estimated amount...</option>
+                    <option value="10k-50k">$10,000 &ndash; $50,000</option>
+                    <option value="50k-150k">$50,000 &ndash; $150,000</option>
+                    <option value="150k-500k">$150,000 &ndash; $500,000</option>
+                    <option value="500k-1m">$500,000 &ndash; $1,000,000</option>
+                    <option value="1m-plus">$1,000,000+</option>
+                  </select>
+                  <div class="invalid-feedback">Please select an estimated funding amount.</div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label">Project Details / Message</label>
+                  <textarea class="form-control" id="contactMessage" rows="4"
+                    placeholder="Briefly describe the equipment you're purchasing or the commercial purpose of the funds..."></textarea>
+                </div>
+
+                <!-- Consent checkbox -->
+                <div class="col-12">
+                  <div class="form-check small text-muted">
+                    <input class="form-check-input" type="checkbox" id="contactTerms" required>
+                    <label class="form-check-label" for="contactTerms">
+                      I agree to allow CapitalForge Finance to review business details and contact me regarding
+                      commercial financing options.
+                    </label>
+                    <div class="invalid-feedback">Consent is required to submit an inquiry.</div>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="bi bi-send-fill me-1"></i> Send Enquiry
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HEADQUARTERS MAP & LOCATION SECTION -->
+  <section class="py-5 bg-subtle border-top">
+    <div class="container py-2">
+      <div class="row align-items-end justify-content-between mb-4 g-3">
+        <div class="col-lg-7">
+          <span class="badge-tag mb-2">Physical Location</span>
+          <h2 class="display-6 fw-bold mb-2">Visit Our Headquarters</h2>
+          <p class="text-muted mb-0">
+            Conveniently situated in Lower Manhattan's Financial District, steps from Wall Street and the New York Stock
+            Exchange.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <a href="https://maps.google.com/?q=100+Financial+Plaza,+New+York,+NY+10005" target="_blank"
+            rel="noopener noreferrer" class="btn btn-outline-custom">
+            <i class="bi bi-geo-alt-fill text-primary me-2"></i>Open in Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Map Card with Responsive Embed -->
+      <div class="contact-map-wrapper mb-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3615480749174!2d-74.0112959234832!3d40.70678887139366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1761895a09%3A0x4642c2ecdfb271d4!2sWall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="CapitalForge Headquarters Location Map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDATORY FOOTER -->
+  <footer class="cf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+              <rect width="40" height="40" rx="10" fill="#0B192C" />
+              <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="20" cy="13" r="2.5" fill="#F59E0B" />
+            </svg>
+            <span>CAPITAL<span class="text-primary">FORGE</span></span>
+          </a>
+          <p class="small text-muted mb-3" style="max-width: 320px;">
+            CapitalForge Finance is an independent commercial financing brokerage partner helping growing enterprises
+            explore equipment loans, working capital, and flexible lines of credit.
+          </p>
+          <div class="d-flex gap-3 text-body">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Financing</h5>
+          <ul class="list-unstyled">
+            <li><a href="equipment-financing.html">Equipment Financing</a></li>
+            <li><a href="equipment-loans.html">Equipment Loans</a></li>
+            <li><a href="working-capital.html">Working Capital</a></li>
+            <li><a href="business-line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-financing.html">Commercial Financing</a></li>
+            <li><a href="financing.html">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="funding-process.html">How It Works</a></li>
+            <li><a href="loan-calculator.html">Loan Calculator</a></li>
+            <li><a href="solutions.html">Growth Solutions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="documentation/index.html">Template Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 100 Financial Plaza, Suite 1400, New York,
+              NY 10005</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i> (800) 555-0199</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> info@capitalforgefinance.demo</li>
+            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM EST
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box mt-4">
+        <strong>Commercial Brokerage Disclosure:</strong> Financing availability, rates, fees, terms, and eligibility
+        are subject to lender criteria and may vary. CapitalForge Finance is an independent financing broker connecting
+        business borrowers with potential commercial funding sources. We are not a direct lender, chartered bank, or
+        government agency.
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>&copy; 2026 CapitalForge Finance. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-md-0 small">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclosures</a>
+          <a href="dashboard.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

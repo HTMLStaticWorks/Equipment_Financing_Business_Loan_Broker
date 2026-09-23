@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapitalForge Finance — Developer &amp; Template Documentation</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .docs-sidebar {
+      position: sticky;
+      top: 24px;
+      height: calc(100vh - 48px);
+      overflow-y: auto;
+    }
+    .docs-nav-link {
+      color: var(--cf-text-muted);
+      font-size: 0.92rem;
+      padding: 0.4rem 0.75rem;
+      display: block;
+      border-radius: 6px;
+    }
+    .docs-nav-link:hover, .docs-nav-link.active {
+      color: var(--cf-accent-blue);
+      background: var(--cf-bg-muted);
+      font-weight: 600;
+    }
+    code {
+      color: var(--cf-accent-blue);
+      background: var(--cf-bg-muted);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+    pre {
+      background: #0B192C;
+      color: #E2E8F0;
+      padding: 1.25rem;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body class="bg-body">
+
+  <!-- Header -->
+  <header class="py-3 border-bottom bg-surface sticky-top">
+    <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <a class="navbar-brand-logo" href="../index.html">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+        <span class="badge bg-primary">v1.0.0 Documentation</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <button class="theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="../index.html" class="btn btn-primary btn-sm"><i class="bi bi-eye me-1"></i> Live Preview</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Docs Body -->
+  <div class="container-fluid px-lg-5 py-4">
+    <div class="row g-4">
+      
+      <!-- Sidebar Nav -->
+      <aside class="col-lg-3 col-xl-2 d-none d-lg-block">
+        <div class="docs-sidebar pe-3">
+          <h6 class="fw-bold font-heading text-uppercase small text-muted mb-2">Getting Started</h6>
+          <nav class="nav flex-column mb-4">
+            <a href="#intro" class="docs-nav-link active">Introduction</a>
+            <a href="#structure" class="docs-nav-link">Directory Map</a>
+            <a href="#setup" class="docs-nav-link">Quick Setup</a>
+          </nav>
+
+          <h6 class="fw-bold font-heading text-uppercase small text-muted mb-2">Design &amp; Styling</h6>
+          <nav class="nav flex-column mb-4">
+            <a href="#css-system" class="docs-nav-link">CSS Custom Properties</a>
+            <a href="#dark-mode" class="docs-nav-link">Dual Light/Dark Theme</a>
+            <a href="#typography" class="docs-nav-link">Typography</a>
+          </nav>
+
+          <h6 class="fw-bold font-heading text-uppercase small text-muted mb-2">Components</h6>
+          <nav class="nav flex-column mb-4">
+            <a href="#navbar" class="docs-nav-link">Navbar &amp; Offcanvas</a>
+            <a href="#calculator" class="docs-nav-link">Loan Calculator Engine</a>
+            <a href="#forms" class="docs-nav-link">Forms &amp; Auth Demo</a>
+          </nav>
+
+          <h6 class="fw-bold font-heading text-uppercase small text-muted mb-2">Support &amp; Credits</h6>
+          <nav class="nav flex-column">
+            <a href="#credits" class="docs-nav-link">Credits &amp; Assets</a>
+            <a href="#changelog" class="docs-nav-link">Changelog</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="col-lg-9 col-xl-10">
+        
+        <!-- Introduction -->
+        <section id="intro" class="mb-5 pb-4 border-bottom">
+          <h1 class="display-6 fw-bold mb-2">CapitalForge Finance Documentation</h1>
+          <p class="lead text-muted">
+            CapitalForge Finance is an ultra-premium HTML5 template developed for commercial equipment financing brokerages, working capital advisors, and business loan facilitators.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-sm-4">
+              <div class="p-3 rounded-3 border bg-surface">
+                <span class="text-muted small d-block">Core Framework</span>
+                <strong class="text-heading">Bootstrap 5.3.3</strong>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 rounded-3 border bg-surface">
+                <span class="text-muted small d-block">JavaScript</span>
+                <strong class="text-heading">Vanilla JS (ES6+)</strong>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 rounded-3 border bg-surface">
+                <span class="text-muted small d-block">Micro-Animations</span>
+                <strong class="text-heading">GSAP 3.12+</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Directory Structure -->
+        <section id="structure" class="mb-5 pb-4 border-bottom">
+          <h3 class="fw-bold mb-3">Project Directory Map</h3>
+          <p class="text-muted">The file structure is organized cleanly for immediate customization and deployment:</p>
+          <pre><code>capitalforge-finance/
+├── index.html                   # Home 1: High-conversion commercial funding broker
+├── home-2.html                  # Home 2: Executive advisory &amp; growth strategy focus
+├── financing.html               # Comprehensive financing solutions directory
+├── financing-details.html       # Master dynamic-ready financing detail layout
+├── equipment-financing.html     # Dedicated: Equipment Financing breakdown
+├── equipment-loans.html         # Dedicated: Equipment Purchase Loans
+├── working-capital.html         # Dedicated: Working Capital &amp; cash flow
+├── business-line-of-credit.html # Dedicated: Revolving Business Lines of Credit
+├── commercial-financing.html    # Dedicated: Large-scale Commercial Financing
+├── solutions.html               # Goal-driven solutions (Start, Equip, Operate, Expand, Flex)
+├── funding-process.html         # 6-step funding journey with timeline UI
+├── loan-calculator.html         # Interactive business loan calculator &amp; amortization
+├── about.html                   # Brokerage philosophy, team, values
+├── contact.html                 # Contact details, consultation form, interactive validation
+├── login.html                   # Front-end auth UI demo (login)
+├── signup.html                  # Front-end auth UI demo (signup)
+├── forgot-password.html         # Front-end auth UI demo (recovery)
+├── 404.html                     # Finance-themed error page
+├── coming-soon.html             # Countdown timer &amp; notify signup page
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css    # Bootstrap 5.3 core
+│   │   ├── bootstrap-icons.min.css # Bootstrap icons stylesheet
+│   │   └── style.css            # Custom theme tokens, cards, calculator, light/dark
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js
+│   │   ├── gsap.min.js
+│   │   └── main.js              # Theme engine, calculator math, validation, countdown
+│   └── images/
+│       ├── hero/                # High-res photography
+│       ├── equipment/           # Machinery, fleets, medical
+│       ├── business/            # Consultation, facilities
+│       ├── industries/          # Construction, healthcare, etc.
+│       └── team/                # Leadership team
+└── documentation/
+    └── index.html               # This documentation file</code></pre>
+        </section>
+
+        <!-- Quick Setup -->
+        <section id="setup" class="mb-5 pb-4 border-bottom">
+          <h3 class="fw-bold mb-3">Quick Setup</h3>
+          <p class="text-muted">No build step or Node compilation is required. CapitalForge Finance is pure HTML5, CSS3, and Vanilla JavaScript.</p>
+          <ol class="text-muted small d-flex flex-column gap-2">
+            <li>Unzip the template archive into your web server root or static directory.</li>
+            <li>Open any <code>.html</code> file in any modern web browser or upload directly to your web hosting provider (Apache, Nginx, Vercel, Netlify, AWS S3, etc.).</li>
+            <li>To customize brand typography or colors, edit <code>assets/css/style.css</code>.</li>
+          </ol>
+        </section>
+
+        <!-- CSS Custom Properties & Dark Mode -->
+        <section id="css-system" class="mb-5 pb-4 border-bottom">
+          <h3 class="fw-bold mb-3">CSS Custom Properties (Color Tokens)</h3>
+          <p class="text-muted">Primary tokens in <code>assets/css/style.css</code> configure colors across light and dark themes:</p>
+          <pre><code>:root, [data-bs-theme="light"] {
+  --cf-primary: #0F223D;       /* Navy */
+  --cf-accent-blue: #2563EB;   /* Trust Blue */
+  --cf-accent-teal: #0D9488;   /* Teal */
+  --cf-accent-gold: #D97706;   /* Gold Highlight */
+  --cf-bg-body: #F8FAFC;       /* Canvas */
+  --cf-bg-surface: #FFFFFF;    /* Surface Cards */
+  --cf-text-heading: #0F172A;  /* Headings */
+  --cf-text-body: #334155;     /* Body */
+  --cf-border: #E2E8F0;        /* Borders */
+}
+
+[data-bs-theme="dark"] {
+  --cf-primary: #1E293B;
+  --cf-accent-blue: #38BDF8;
+  --cf-accent-teal: #14B8A6;
+  --cf-bg-body: #070D14;       /* Dark Obsidian */
+  --cf-bg-surface: #0E1726;
+  --cf-text-heading: #F8FAFC;
+  --cf-text-body: #CBD5E1;
+  --cf-border: #1E2E42;
+}</code></pre>
+        </section>
+
+        <!-- Calculator Engine -->
+        <section id="calculator" class="mb-5 pb-4 border-bottom">
+          <h3 class="fw-bold mb-3">Loan Calculator Engine</h3>
+          <p class="text-muted">
+            The interactive calculator located in <code>assets/js/main.js</code> implements the standard commercial amortization formula:
+          </p>
+          <pre><code>// Standard Amortizing Formula
+if (annualRate === 0) {
+  monthlyPayment = P / n;
+} else {
+  const r = (annualRate / 100) / 12;
+  const rateFactor = Math.pow(1 + r, n);
+  monthlyPayment = P * (r * rateFactor) / (rateFactor - 1);
+}</code></pre>
+          <p class="text-muted small">
+            It automatically synchronizes range sliders, numeric input fields, preset chips ($50K, $150K, $500K, etc.), term pill selectors, visual breakdown share bars, and builds sample 12-month amortization previews.
+          </p>
+        </section>
+
+        <!-- Credits -->
+        <section id="credits" class="mb-5">
+          <h3 class="fw-bold mb-3">Credits &amp; Third-Party Resources</h3>
+          <ul class="text-muted small d-flex flex-column gap-2">
+            <li><strong>Bootstrap 5.3.3:</strong> <a href="https://getbootstrap.com" target="_blank" rel="noopener">https://getbootstrap.com</a></li>
+            <li><strong>Bootstrap Icons:</strong> <a href="https://icons.getbootstrap.com" target="_blank" rel="noopener">https://icons.getbootstrap.com</a></li>
+            <li><strong>GSAP &amp; ScrollTrigger:</strong> <a href="https://greensock.com" target="_blank" rel="noopener">https://greensock.com</a></li>
+            <li><strong>Google Fonts:</strong> Space Grotesk &amp; Inter (<a href="https://fonts.google.com" target="_blank" rel="noopener">https://fonts.google.com</a>)</li>
+            <li><strong>Photography:</strong> Unsplash License (<a href="https://unsplash.com" target="_blank" rel="noopener">https://unsplash.com</a>)</li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

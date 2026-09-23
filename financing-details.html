@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In-depth breakdown of commercial financing solutions: eligibility considerations, example funding scenarios, structural considerations, and application guides.">
+  <title>Financing Solution Overview | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mandatory Sticky Navbar -->
+            <header class="cf-header">
+    <nav class="navbar navbar-expand-xl py-3" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Controls: Only Hamburger Menu in Header (RTL, Theme & Sign Up inside Menu Drawer) -->
+        <div class="d-flex align-items-center d-xl-none ms-auto">
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-heading"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse d-none d-xl-flex">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
+              </ul>
+            </li>
+
+            <!-- Direct Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="financing.html">Financing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="loan-calculator.html">Loan Calculator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="funding-process.html">How It Works</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Area: RTL Toggle, Theme Toggle & Sign Up Button -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="signup.html" class="btn btn-primary btn-sm px-3">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Exact match to Navbar menus + All Controls inside) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="accordion accordion-flush" id="mobileNavAccordion">
+          
+          <!-- Home Accordion Item matching Home Dropdown -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileHome">
+              <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
+                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+              </button>
+            </h2>
+            <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
+              <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
+                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <div class="d-flex flex-column gap-1 pt-1">
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
+      <div class="pt-3 border-top mt-auto">
+        <div class="mb-3">
+          <a href="signup.html" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus"></i> Sign Up
+          </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-1">
+          <span class="small text-muted fw-semibold">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="py-5 bg-subtle border-bottom">
+    <div class="container py-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="financing.html">Financing</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Financing Detail Blueprint</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge-tag mb-2">Program Anatomy</span>
+          <h1 class="display-5 fw-bold mb-3">Structured Growth Financing Blueprint</h1>
+          <p class="lead text-muted mb-0">
+            A comprehensive overview of how strategic commercial debt is structured to support enterprise expansion, facility upgrades, and multi-market revenue ramp-ups.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-right-circle"></i> Inquire About Growth Terms
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN DETAIL CONTENT -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        
+        <!-- Left: Detailed Content Sections -->
+        <div class="col-lg-8">
+          
+          <!-- Financing Overview -->
+          <div class="mb-5">
+            <h2 class="fw-bold mb-3">Financing Overview</h2>
+            <p>
+              Growth financing provides mid-market and scaling businesses with non-dilutive capital to invest in high-conviction opportunities where the timing of cash inflows lags immediate expenditures. Unlike transactional loans with restrictive daily debits, growth facilities negotiated through our brokerage network are structured with realistic monthly repayment schedules aligned with your revenue ramp.
+            </p>
+            <p>
+              CapitalForge Finance acts as your commercial advisor throughout this process, examining your company’s historical balance sheets and projections to position your application with lenders whose risk criteria match your growth thesis.
+            </p>
+          </div>
+
+          <!-- Best Suited For & Common Use Cases -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 d-flex align-items-center text-primary">
+                  <i class="bi bi-bullseye me-2"></i> Best Suited For
+                </h5>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check2 text-success me-2"></i> Companies with $30,000+ monthly revenue</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> Minimum 12–24 months operating history</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> High gross margins capable of debt service</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> Predictable customer acquisition metrics</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 d-flex align-items-center text-primary">
+                  <i class="bi bi-lightbulb me-2"></i> Common Use Cases
+                </h5>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-arrow-right text-primary me-2"></i> Opening second or third branch locations</li>
+                  <li><i class="bi bi-arrow-right text-primary me-2"></i> Launching enterprise sales &amp; marketing</li>
+                  <li><i class="bi bi-arrow-right text-primary me-2"></i> Executing proprietary software or tool rollouts</li>
+                  <li><i class="bi bi-arrow-right text-primary me-2"></i> Scaling distribution or inventory bulk runs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Considerations -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Key Strategic Considerations</h3>
+            <p class="text-muted">
+              Before committing to any commercial funding structure, business leaders should evaluate the following critical parameters with their advisors:
+            </p>
+            <div class="accordion accordion-cf" id="considerationsAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                    Debt Service Coverage Ratio (DSCR)
+                  </button>
+                </h2>
+                <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#considerationsAccordion">
+                  <div class="accordion-body small text-muted">
+                    Lenders evaluate whether your existing net operating income comfortably exceeds the proposed principal and interest obligations. A minimum DSCR of 1.25x is typically favored by commercial institutions.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                    Prepayment Flexibility &amp; Penalty Clauses
+                  </button>
+                </h2>
+                <div id="c2" class="accordion-collapse collapse" data-bs-parent="#considerationsAccordion">
+                  <div class="accordion-body small text-muted">
+                    If revenue accelerates ahead of plan, you may wish to retire the facility early. We advocate for structures with either zero prepayment penalties or step-down penalty schedules.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                    Subordination &amp; Existing Senior Liens
+                  </button>
+                </h2>
+                <div id="c3" class="accordion-collapse collapse" data-bs-parent="#considerationsAccordion">
+                  <div class="accordion-body small text-muted">
+                    If your business currently maintains an active bank credit line or equipment lien, growth capital must be structured either in second position or alongside a intercreditor subordination agreement.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example Funding Scenario (Clearly Labeled as Illustrative) -->
+          <div class="p-4 rounded-4 border bg-subtle mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-secondary text-uppercase fw-bold px-2 py-1 small">Illustrative Example</span>
+              <span class="text-muted small">Not a loan offer</span>
+            </div>
+            <h4 class="fw-bold mb-2">Example Scenario: Midwestern Metal Fabrication Co.</h4>
+            <p class="small text-muted mb-4">
+              The following scenario illustrates how a mid-sized contractor utilized structured growth financing alongside equipment loans to scale capacity:
+            </p>
+            <div class="row g-3 text-center mb-3">
+              <div class="col-sm-4">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <span class="small text-muted d-block">Facility Size</span>
+                  <span class="h5 fw-bold text-heading num-tabular">$350,000</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <span class="small text-muted d-block">Example Term</span>
+                  <span class="h5 fw-bold text-heading">48 Months</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <span class="small text-muted d-block">Example APR</span>
+                  <span class="h5 fw-bold text-primary num-tabular">8.75%</span>
+                </div>
+              </div>
+            </div>
+            <p class="small text-muted mb-0">
+              <strong>Outcome:</strong> Funded new branch office setup, onboarded 4 technical specialists, and financed additional raw steel inventory. Repaid via structured monthly amortizing payments without dilution of equity.
+            </p>
+          </div>
+
+          <!-- Application Information -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">What You Need to Apply</h3>
+            <p class="text-muted">
+              Gathering these foundational documents expedites underwriter review through our brokerage network:
+            </p>
+            <div class="row g-3 small">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading"><i class="bi bi-file-earmark-text text-primary me-1"></i> Bank Statements</strong>
+                  <span class="text-muted">Most recent 3–6 months of complete business banking statements.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading"><i class="bi bi-receipt text-primary me-1"></i> Tax Returns</strong>
+                  <span class="text-muted">Past 1–2 years of filed federal business tax returns.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading"><i class="bi bi-graph-up text-primary me-1"></i> P&amp;L and Balance Sheet</strong>
+                  <span class="text-muted">Year-to-date interim financial statements.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading"><i class="bi bi-person-badge text-primary me-1"></i> Ownership Overview</strong>
+                  <span class="text-muted">Standard government ID and entity formation documents.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Frequently Asked Questions</h3>
+            <div class="accordion accordion-cf" id="detailFaqs">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    How does CapitalForge Finance earn compensation as a broker?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#detailFaqs">
+                  <div class="accordion-body small text-muted">
+                    We receive an institutional placement fee paid directly by the funding provider upon successful loan closing. We do not charge borrowers upfront application fees or surprise evaluation costs.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Does reviewing financing options hurt my business credit score?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#detailFaqs">
+                  <div class="accordion-body small text-muted">
+                    Initial pre-qualification and strategy discussions involve soft inquiries that do not negatively affect credit ratings. Hard inquiries only occur with your explicit consent prior to final lender documentation.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    How fast can funding be completed once terms are accepted?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#detailFaqs">
+                  <div class="accordion-body small text-muted">
+                    Funding timelines depend on the facility complexity. Working capital and equipment lines frequently disburse in 24 to 72 hours following documentation, while multi-million commercial loans may require 1 to 3 weeks for full verification.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sidebar Sticky Card & Related Programs -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            
+            <div class="calculator-results-card mb-4">
+              <span class="badge bg-primary text-white mb-2">Advisory Inquiries</span>
+              <h4 class="fw-bold mb-2">Explore Your Custom Funding Scenario</h4>
+              <p class="small text-muted mb-4">
+                Submit an overview of your upcoming project or equipment purchase to receive comparative term sheets.
+              </p>
+              <a href="contact.html" class="btn btn-primary w-100 mb-2">
+                <i class="bi bi-arrow-right-circle"></i> Request Term Sheet
+              </a>
+              <a href="loan-calculator.html" class="btn btn-outline-custom w-100 small">
+                <i class="bi bi-calculator"></i> Run Calculator Model
+              </a>
+              <div class="mt-3 pt-3 border-top small text-muted text-center">
+                <i class="bi bi-telephone me-1"></i> Speak with an advisor: <strong>(800) 555-0199</strong>
+              </div>
+            </div>
+
+            <!-- Related Financing Options -->
+            <div class="p-4 rounded-4 border bg-surface">
+              <h5 class="fw-bold mb-3">Related Financing Vehicles</h5>
+              <div class="d-flex flex-column gap-3 small">
+                <a href="equipment-financing.html" class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-muted text-heading">
+                  <span><i class="bi bi-truck me-2 text-primary"></i> Equipment Financing</span>
+                  <i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="working-capital.html" class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-muted text-heading">
+                  <span><i class="bi bi-cash-stack me-2 text-primary"></i> Working Capital</span>
+                  <i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="business-line-of-credit.html" class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-muted text-heading">
+                  <span><i class="bi bi-credit-card me-2 text-primary"></i> Business Credit Line</span>
+                  <i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="commercial-financing.html" class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-muted text-heading">
+                  <span><i class="bi bi-buildings me-2 text-primary"></i> Commercial Financing</span>
+                  <i class="bi bi-chevron-right text-muted"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDATORY FOOTER -->
+          <footer class="cf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+              <rect width="40" height="40" rx="10" fill="#0B192C"/>
+              <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+            </svg>
+            <span>CAPITAL<span class="text-primary">FORGE</span></span>
+          </a>
+          <p class="small text-muted mb-3" style="max-width: 320px;">
+            CapitalForge Finance is an independent commercial financing brokerage partner helping growing enterprises explore equipment loans, working capital, and flexible lines of credit.
+          </p>
+          <div class="d-flex gap-3 text-body">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Financing</h5>
+          <ul class="list-unstyled">
+            <li><a href="equipment-financing.html">Equipment Financing</a></li>
+            <li><a href="equipment-loans.html">Equipment Loans</a></li>
+            <li><a href="working-capital.html">Working Capital</a></li>
+            <li><a href="business-line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-financing.html">Commercial Financing</a></li>
+            <li><a href="financing.html">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="funding-process.html">How It Works</a></li>
+            <li><a href="loan-calculator.html">Loan Calculator</a></li>
+            <li><a href="solutions.html">Growth Solutions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="documentation/index.html">Template Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 100 Financial Plaza, Suite 1400, New York, NY 10005</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i> (800) 555-0199</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> info@capitalforgefinance.demo</li>
+            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM EST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box mt-4">
+        <strong>Commercial Brokerage Disclosure:</strong> Financing availability, rates, fees, terms, and eligibility are subject to lender criteria and may vary. CapitalForge Finance is an independent financing broker connecting business borrowers with potential commercial funding sources. We are not a direct lender, chartered bank, or government agency.
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>&copy; 2026 CapitalForge Finance. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-md-0 small">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclosures</a>
+          <a href="dashboard.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

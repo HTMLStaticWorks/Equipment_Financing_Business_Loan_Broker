@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore commercial equipment loans: term structures, ownership transfer, fixed amortizing payments, and documentation requirements for purchasing business machinery.">
+  <title>Commercial Equipment Loans | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mandatory Sticky Navbar -->
+            <header class="cf-header">
+    <nav class="navbar navbar-expand-xl py-3" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Controls: Only Hamburger Menu in Header (RTL, Theme & Sign Up inside Menu Drawer) -->
+        <div class="d-flex align-items-center d-xl-none ms-auto">
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-heading"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse d-none d-xl-flex">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
+              </ul>
+            </li>
+
+            <!-- Direct Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="financing.html">Financing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="loan-calculator.html">Loan Calculator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="funding-process.html">How It Works</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Area: RTL Toggle, Theme Toggle & Sign Up Button -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="signup.html" class="btn btn-primary btn-sm px-3">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Exact match to Navbar menus + All Controls inside) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="accordion accordion-flush" id="mobileNavAccordion">
+          
+          <!-- Home Accordion Item matching Home Dropdown -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileHome">
+              <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
+                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+              </button>
+            </h2>
+            <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
+              <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
+                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <div class="d-flex flex-column gap-1 pt-1">
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
+      <div class="pt-3 border-top mt-auto">
+        <div class="mb-3">
+          <a href="signup.html" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus"></i> Sign Up
+          </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-1">
+          <span class="small text-muted fw-semibold">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="py-5 bg-subtle border-bottom">
+    <div class="container py-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="financing.html">Financing</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Equipment Loans</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge-tag tag-teal mb-2">Secured Installment Debt</span>
+          <h1 class="display-5 fw-bold mb-3">Commercial Equipment Loans</h1>
+          <p class="lead text-muted mb-0">
+            Obtain immediate commercial ownership of business machinery and vehicles through structured installment loans featuring predictable monthly payments and equipment collateralization.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-right-circle"></i> Inquire About Equipment Loans
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        
+        <div class="col-lg-8">
+          
+          <!-- Equipment Purchase Financing -->
+          <div class="mb-5">
+            <h2 class="fw-bold mb-3">Understanding Equipment Purchase Loans</h2>
+            <p>
+              An equipment loan is a traditional commercial term facility specifically structured to fund the purchase price of designated business assets. When funding occurs, the business assumes legal title to the equipment, and the lending institution places a UCC-1 security lien on the asset until the loan is satisfied in full.
+            </p>
+            <p>
+              This structure is favored by enterprises that intend to maintain and utilize the machinery for many years beyond the loan maturity horizon, eliminating return obligations associated with operating leases.
+            </p>
+          </div>
+
+          <!-- Loan Structure & Repayment -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-clock-history me-2"></i> Repayment Term Horizons</h5>
+                <p class="small text-muted mb-3">
+                  Loan terms typically mirror the productive depreciation schedule of the equipment:
+                </p>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>24–36 Months:</strong> IT servers, diagnostic software, point of sale</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>48–60 Months:</strong> Fleet delivery vehicles, kitchen equipment, tooling</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>72–84 Months:</strong> Heavy earthmoving machinery, combine harvesters, plant lines</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-shield-check me-2"></i> Security &amp; Collateral</h5>
+                <p class="small text-muted mb-3">
+                  Because the purchased equipment functions as collateral:
+                </p>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check2 text-success me-2"></i> Primary collateral is isolated to the specific asset</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> Avoids blanket liens on company accounts receivable</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> No requirement for residential real estate pledges in standard structures</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- New vs. Used Equipment Considerations -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">New vs. Used Equipment Considerations</h3>
+            <p class="text-muted">
+              Lenders evaluate applications differently depending on whether the asset is brand new from a certified dealer or pre-owned from a third-party seller:
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle small bg-surface">
+                <thead class="table-light">
+                  <tr>
+                    <th>Factor</th>
+                    <th>New Equipment</th>
+                    <th>Used Equipment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-semibold">Advance Rate</td>
+                    <td>Up to 100% invoice price</td>
+                    <td>Typically 75% &ndash; 90% of appraised orderly liquidation value</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold">Maximum Term</td>
+                    <td>Up to 84 months</td>
+                    <td>Usually limited so age + term does not exceed 10–12 years</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold">Verification</td>
+                    <td>Dealer invoice and warranty spec sheet</td>
+                    <td>Inspection report, serial log, maintenance history &amp; bill of sale</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Required Business Documentation -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Business Documentation Required for Underwriting</h3>
+            <div class="row g-3 small">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">1. Equipment Vendor Invoice / Spec Quote</strong>
+                  <span class="text-muted">Make, model, year, serial number, and full invoice breakdown from vendor.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">2. Recent Business Banking History</strong>
+                  <span class="text-muted">3 to 6 months of complete operating bank statements showing cash flow.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">3. Business Tax Returns</strong>
+                  <span class="text-muted">Past 2 years of signed business federal tax returns (for loans over $150K).</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">4. Entity Legal Verification</strong>
+                  <span class="text-muted">Articles of incorporation, operating agreement, and owner identification.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Equipment Loan FAQs</h3>
+            <div class="accordion accordion-cf" id="loanFaqs">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#lf1">
+                    What happens if the equipment breaks down during the loan term?
+                  </button>
+                </h2>
+                <div id="lf1" class="accordion-collapse collapse show" data-bs-parent="#loanFaqs">
+                  <div class="accordion-body small text-muted">
+                    Because you own the equipment directly under an equipment loan, you remain responsible for maintenance, repairs, and manufacturer warranties. Commercial property insurance is typically required by the lender to protect against physical damage or loss.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lf2">
+                    Are equipment loans eligible for Section 179 tax deductions?
+                  </button>
+                </h2>
+                <div id="lf2" class="accordion-collapse collapse" data-bs-parent="#loanFaqs">
+                  <div class="accordion-body small text-muted">
+                    In many cases, yes. Under IRS Section 179 guidelines, qualifying business equipment purchased with a commercial loan may be eligible for full or partial first-year purchase price deduction. Consult your CPA to evaluate your business's specific tax position.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lf3">
+                    Can private-party used equipment purchases be financed?
+                  </button>
+                </h2>
+                <div id="lf3" class="accordion-collapse collapse" data-bs-parent="#loanFaqs">
+                  <div class="accordion-body small text-muted">
+                    Yes. While dealer purchases involve standardized invoices, private-party transactions require a third-party title search, lien release check, and independent valuation before funding.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="calculator-results-card mb-4">
+              <span class="badge bg-success text-white mb-2">Direct Loan Application</span>
+              <h4 class="fw-bold mb-2">Ready to Finance Equipment?</h4>
+              <p class="small text-muted mb-4">
+                Submit your equipment specifications to compare installment options from equipment loan underwriters.
+              </p>
+              <a href="contact.html" class="btn btn-primary w-100 mb-2">
+                <i class="bi bi-arrow-right-circle"></i> Apply for Equipment Loan
+              </a>
+              <a href="loan-calculator.html" class="btn btn-outline-custom w-100 small">
+                <i class="bi bi-calculator"></i> Run Loan Calculator
+              </a>
+            </div>
+
+            <div class="p-4 rounded-4 border bg-surface">
+              <h5 class="fw-bold mb-3">Compare With Other Programs</h5>
+              <div class="d-flex flex-column gap-2 small">
+                <a href="equipment-financing.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Equipment Financing (Lease)</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="working-capital.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Working Capital</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="commercial-financing.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Commercial Financing</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDATORY FOOTER -->
+          <footer class="cf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+              <rect width="40" height="40" rx="10" fill="#0B192C"/>
+              <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+            </svg>
+            <span>CAPITAL<span class="text-primary">FORGE</span></span>
+          </a>
+          <p class="small text-muted mb-3" style="max-width: 320px;">
+            CapitalForge Finance is an independent commercial financing brokerage partner helping growing enterprises explore equipment loans, working capital, and flexible lines of credit.
+          </p>
+          <div class="d-flex gap-3 text-body">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Financing</h5>
+          <ul class="list-unstyled">
+            <li><a href="equipment-financing.html">Equipment Financing</a></li>
+            <li><a href="equipment-loans.html">Equipment Loans</a></li>
+            <li><a href="working-capital.html">Working Capital</a></li>
+            <li><a href="business-line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-financing.html">Commercial Financing</a></li>
+            <li><a href="financing.html">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="funding-process.html">How It Works</a></li>
+            <li><a href="loan-calculator.html">Loan Calculator</a></li>
+            <li><a href="solutions.html">Growth Solutions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="documentation/index.html">Template Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 100 Financial Plaza, Suite 1400, New York, NY 10005</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i> (800) 555-0199</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> info@capitalforgefinance.demo</li>
+            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM EST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box mt-4">
+        <strong>Commercial Brokerage Disclosure:</strong> Financing availability, rates, fees, terms, and eligibility are subject to lender criteria and may vary. CapitalForge Finance is an independent financing broker connecting business borrowers with potential commercial funding sources. We are not a direct lender, chartered bank, or government agency.
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>&copy; 2026 CapitalForge Finance. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-md-0 small">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclosures</a>
+          <a href="dashboard.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

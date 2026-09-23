@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapitalForge Finance — Executive Commercial Financing, Strategic Equipment Capital, and Advisory Solutions for Enterprise Expansion.">
+  <meta name="keywords" content="executive equipment loans, commercial debt advisory, growth capital, business financing strategy, equipment lease broker">
+  <meta property="og:title" content="CapitalForge Finance | Executive Financial Advisory &amp; Equipment Capital">
+  <meta property="og:description" content="Strategic capital structuring and commercial funding for established enterprises.">
+  <meta property="og:type" content="website">
+  <title>CapitalForge Finance | Executive Commercial Advisory &amp; Growth Capital</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mandatory Sticky Navbar -->
+  <header class="cf-header">
+    <nav class="navbar navbar-expand-xl py-3" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Controls: Only Hamburger Menu in Header (RTL, Theme & Sign Up inside Menu Drawer) -->
+        <div class="d-flex align-items-center d-xl-none ms-auto">
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-heading"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse d-none d-xl-flex">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
+              </ul>
+            </li>
+
+            <!-- Direct Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="financing.html">Financing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="loan-calculator.html">Loan Calculator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="funding-process.html">How It Works</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Area: RTL Toggle, Theme Toggle & Sign Up Button -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="signup.html" class="btn btn-primary btn-sm px-3">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Exact match to Navbar menus + All Controls inside) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="accordion accordion-flush" id="mobileNavAccordion">
+          
+          <!-- Home Accordion Item matching Home Dropdown -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileHome">
+              <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
+                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+              </button>
+            </h2>
+            <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
+              <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
+                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <div class="d-flex flex-column gap-1 pt-1">
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
+      <div class="pt-3 border-top mt-auto">
+        <div class="mb-3">
+          <a href="signup.html" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus"></i> Sign Up
+          </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-1">
+          <span class="small text-muted fw-semibold">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cf-hero cf-hero-dark">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <!-- Left: Strategic Narrative -->
+        <div class="col-lg-6">
+          <div class="badge-tag tag-gold mb-3">
+            <i class="bi bi-briefcase-fill"></i> Strategic Growth Advisory
+          </div>
+          <h1 class="hero-title">
+            Capital That Helps You Move Forward.
+          </h1>
+          <p class="hero-lead text-light">
+            We work alongside business principals to structure equipment acquisition facilities, optimize balance sheet liquidity, and negotiate commercial funding packages designed for strategic expansion.
+          </p>
+
+          <!-- Compact Funding CTA Panel -->
+          <div class="p-4 rounded-3 border mt-4" style="background: rgba(14, 23, 38, 0.85); border-color: rgba(255, 255, 255, 0.15) !important;">
+            <div class="row g-2 align-items-center">
+              <div class="col-sm-7">
+                <div class="fw-bold font-heading text-white">Targeting Equipment or Growth Capital?</div>
+                <div class="small hero-stat-subtext">Review options across our institutional network.</div>
+              </div>
+              <div class="col-sm-5 text-sm-end">
+                <a href="contact.html" class="btn btn-primary w-100">
+                  Request Consultation <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 mt-4 pt-2">
+            <div>
+              <div class="h3 font-heading fw-bold text-white mb-0">$50K &ndash; $5M+</div>
+              <div class="small hero-stat-subtext">Brokerage Facility Scope</div>
+            </div>
+            <div class="border-start ps-4 hero-stat-divider" style="border-color: rgba(255, 255, 255, 0.15) !important;">
+              <div class="h3 font-heading fw-bold text-white mb-0">12 &ndash; 84 Mo</div>
+              <div class="small hero-stat-subtext">Flexible Term Horizons</div>
+            </div>
+            <div class="border-start ps-4 hero-stat-divider" style="border-color: rgba(255, 255, 255, 0.15) !important;">
+              <div class="h3 font-heading fw-bold text-white mb-0">100%</div>
+              <div class="small hero-stat-subtext">Transparent Fee Policy</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Executive Visual with Floating Information -->
+        <div class="col-lg-6">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero/hero-advisory.jpg" alt="Commercial Financial Broker reviewing enterprise balance sheet" style="height: 520px; object-fit: cover;">
+            
+            <!-- Floating Box 1 -->
+            <div class="hero-floating-stat" style="bottom: 24px; left: 24px; max-width: 290px;">
+              <div class="d-flex align-items-center gap-3">
+                <div class="cf-card-icon icon-gold m-0" style="width: 44px; height: 44px;">
+                  <i class="bi bi-graph-up-arrow fs-5"></i>
+                </div>
+                <div>
+                  <div class="fw-bold font-heading small sticker-title">Growth Capital Match</div>
+                  <div class="small sticker-desc">Multi-lender term negotiation</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Box 2 -->
+            <div class="hero-floating-stat-alt" style="top: 24px; right: 24px;">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-shield-check text-success fs-5"></i>
+                <span class="small fw-bold sticker-title">Fiduciary-Oriented Brokerage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDING BY BUSINESS NEED (EDITORIAL GRID) -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 720px;">
+        <span class="badge-tag tag-teal mb-2">Intent-Driven Capital</span>
+        <h2 class="mb-3">Financing Configured to Your Exact Business Need</h2>
+        <p class="text-muted">
+          Every commercial deployment has distinct repayment economics. Explore targeted financing options aligned with your immediate milestone.
+        </p>
+      </div>
+
+      <div class="row g-4 row-2-cols-1024 justify-content-center">
+        <!-- 1. Buy Equipment -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon m-0">
+                <i class="bi bi-truck"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Asset Secured</span>
+            </div>
+            <h4 class="fw-bold mb-2">Buy Equipment</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Acquire revenue-generating machinery, commercial fleets, or production systems without depleting treasury cash reserves.
+            </p>
+            <a href="equipment-financing.html" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Equipment Financing <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Manage Working Capital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon icon-teal m-0">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Operational</span>
+            </div>
+            <h4 class="fw-bold mb-2">Manage Working Capital</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Bridge seasonal invoice delays, support recurring payroll, or seize short-window inventory supplier discounts.
+            </p>
+            <a href="working-capital.html" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Working Capital <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Expand Operations -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon icon-gold m-0">
+                <i class="bi bi-buildings"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Expansion</span>
+            </div>
+            <h4 class="fw-bold mb-2">Expand Operations</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Finance warehouse additions, new geographical branch launches, or production line enhancements.
+            </p>
+            <a href="commercial-financing.html" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Commercial Financing <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Access a Credit Line -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon m-0">
+                <i class="bi bi-credit-card"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Revolving</span>
+            </div>
+            <h4 class="fw-bold mb-2">Access a Credit Line</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Maintain an active capital reservoir. Draw funds on-demand, make payments, and replenish for unforeseen operational needs.
+            </p>
+            <a href="business-line-of-credit.html" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Lines of Credit <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Upgrade Technology -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon icon-teal m-0">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Tech Modernization</span>
+            </div>
+            <h4 class="fw-bold mb-2">Upgrade Technology</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Install enterprise server architecture, robotic manufacturing controllers, or automated sorting systems.
+            </p>
+            <a href="equipment-loans.html" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Tech Equipment Loans <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Fund Growth -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cf-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="cf-card-icon icon-gold m-0">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <span class="badge bg-light text-dark border">Strategic</span>
+            </div>
+            <h4 class="fw-bold mb-2">Fund Growth</h4>
+            <p class="text-muted small mb-4 flex-grow-1">
+              Explore structured capital solutions to onboard strategic talent, launch marketing campaigns, or fulfill enterprise contracts.
+            </p>
+            <a href="solutions.html#growth" class="fw-semibold text-primary d-inline-flex align-items-center">
+              Explore Growth Solutions <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDING PATHWAY VISUALIZATION (CONNECTING LINES) -->
+  <section class="py-5 bg-subtle border-top border-bottom">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 720px;">
+        <span class="badge-tag mb-2">Execution Framework</span>
+        <h2 class="mb-3">The CapitalForge Funding Pathway</h2>
+        <p class="text-muted">
+          A disciplined advisory progression connecting initial requirements to structured commercial capital.
+        </p>
+      </div>
+
+      <!-- Connecting Pathway Graphic & Steps -->
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="p-3 bg-surface rounded-4 border shadow-sm">
+            <img src="assets/images/growth/growth-chart.svg" alt="Financial Pathway &amp; Growth Acceleration Chart" class="w-100 rounded-3">
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="cf-pathway-container">
+            <!-- Node 1 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">1</div>
+              <h5 class="fw-bold mb-1">Business Need Identification</h5>
+              <p class="text-muted small mb-0">
+                Clarify the precise commercial objective — whether asset acquisition, short-term liquidity, or multi-year growth funding.
+              </p>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">2</div>
+              <h5 class="fw-bold mb-1">Financing Strategy Formulation</h5>
+              <p class="text-muted small mb-0">
+                Determine appropriate structure: equipment lease vs. loan, revolving line vs. term financing, and tax depreciation impacts.
+              </p>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">3</div>
+              <h5 class="fw-bold mb-1">Available Options Review</h5>
+              <p class="text-muted small mb-0">
+                Examine term proposals from independent lending partners, comparing payment cadence, covenant restrictions, and total cost of capital.
+              </p>
+            </div>
+
+            <!-- Node 4 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">4</div>
+              <h5 class="fw-bold mb-1">Next Step Execution</h5>
+              <p class="text-muted small mb-0">
+                Coordinate closing documentation with chosen capital provider and deploy funding directly into commercial operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT + GROWTH SECTION (LARGE SPLIT-SCREEN) -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 720px;">
+        <span class="badge-tag tag-gold mb-2">Dual Pillars</span>
+        <h2 class="mb-3">Two Core Pillars of Commercial Financing</h2>
+        <p class="text-muted">
+          Distinguish between hard-asset financing secured by machinery and growth capital configured around operational momentum.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Pillar 1: Equipment Financing -->
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 border bg-surface h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div class="position-absolute top-0 end-0 p-3 opacity-10">
+              <i class="bi bi-truck display-1 text-primary"></i>
+            </div>
+            <div>
+              <span class="badge bg-primary text-white px-3 py-2 rounded-pill small fw-bold mb-3">Pillar 01</span>
+              <h3 class="fw-bold mb-3">Equipment Financing</h3>
+              <p class="text-muted mb-4">
+                Structured explicitly around tangible machinery, vehicles, and commercial apparatus. Because the asset itself secures the facility, approval criteria often focus on equipment liquidity and company operating revenues rather than extensive personal collateral.
+              </p>
+
+              <div class="d-flex flex-column gap-2 mb-4 small text-muted">
+                <div><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Asset Retention:</strong> Acquire ownership at end of term.</div>
+                <div><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Cash Preservation:</strong> Keep credit lines free for emergencies.</div>
+                <div><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Tax Benefits:</strong> Potential Section 179 depreciation deductions.</div>
+              </div>
+            </div>
+
+            <div>
+              <a href="equipment-financing.html" class="btn btn-outline-custom w-100">
+                Review Equipment Programs <i class="bi bi-chevron-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Growth Capital -->
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 border h-100 d-flex flex-column justify-content-between position-relative overflow-hidden" style="background: var(--cf-card-gradient);">
+            <div class="position-absolute top-0 end-0 p-3 opacity-10">
+              <i class="bi bi-rocket-takeoff display-1 text-success"></i>
+            </div>
+            <div>
+              <span class="badge bg-success text-white px-3 py-2 rounded-pill small fw-bold mb-3">Pillar 02</span>
+              <h3 class="fw-bold mb-3">Growth Capital &amp; Operations</h3>
+              <p class="text-muted mb-4">
+                Designed to fund strategic payroll expansion, marketing campaigns, bulk raw material acquisition, and new geographic territories. Tailored around your enterprise cash conversion cycle to provide breathing room during rapid growth.
+              </p>
+
+              <div class="d-flex flex-column gap-2 mb-4 small text-muted">
+                <div><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Unrestricted Deployment:</strong> Use where ROI is highest.</div>
+                <div><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Flexible Repayment:</strong> Structured around seasonal cycles.</div>
+                <div><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Non-Dilutive:</strong> Retain full equity and company ownership.</div>
+              </div>
+            </div>
+
+            <div>
+              <a href="solutions.html#growth" class="btn btn-primary w-100">
+                Review Growth Capital <i class="bi bi-chevron-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR FEATURE (LARGE EXECUTIVE PANEL) -->
+  <section class="py-5 bg-subtle border-top border-bottom">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 720px;">
+        <span class="badge-tag mb-2">Scenario Modeling</span>
+        <h2 class="mb-3">What Could Your Monthly Payment Look Like?</h2>
+        <p class="text-muted">
+          Adjust loan principal, interest expectations, and amortization horizons below to simulate cash flow impacts for your upcoming capital investment.
+        </p>
+      </div>
+
+      <div class="calculator-card cf-calculator-instance mx-auto" style="max-width: 960px;">
+        <div class="row g-4 align-items-center">
+          
+          <!-- Sliders and Inputs -->
+          <div class="col-lg-7">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label for="home2CalcAmount" class="form-label mb-0 fw-bold">Required Financing Amount</label>
+                <div class="input-group input-group-sm" style="max-width: 150px;">
+                  <span class="input-group-text">$</span>
+                  <input type="number" class="form-control text-end num-tabular calc-amount-input" id="home2CalcAmountInput" value="250000" min="5000" max="2000000" step="10000">
+                </div>
+              </div>
+              <input type="range" class="form-range calc-amount-slider" id="home2CalcAmount" min="5000" max="2000000" step="10000" value="250000">
+              <div class="preset-chips">
+                <span class="preset-chip" data-val="100000">$100K</span>
+                <span class="preset-chip" data-val="250000">$250K</span>
+                <span class="preset-chip" data-val="500000">$500K</span>
+                <span class="preset-chip" data-val="1000000">$1.0M</span>
+                <span class="preset-chip" data-val="2000000">$2.0M</span>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label for="home2CalcRate" class="form-label mb-0 fw-bold">Estimated Annual Rate (%)</label>
+                <div class="input-group input-group-sm" style="max-width: 110px;">
+                  <input type="number" class="form-control text-end num-tabular calc-rate-input" id="home2CalcRateInput" value="7.75" min="0" max="30" step="0.25">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+              <input type="range" class="form-range calc-rate-slider" id="home2CalcRate" min="0" max="30" step="0.25" value="7.75">
+              <div class="d-flex justify-content-between text-muted small mt-1">
+                <span>0% (Promo)</span>
+                <span>15%</span>
+                <span>30%</span>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label mb-2 fw-bold">Repayment Horizon (Months)</label>
+              <div class="term-pills-group">
+                <div class="term-pill-btn" data-term="12">12 Mo</div>
+                <div class="term-pill-btn" data-term="24">24 Mo</div>
+                <div class="term-pill-btn" data-term="36">36 Mo</div>
+                <div class="term-pill-btn active" data-term="48">48 Mo</div>
+                <div class="term-pill-btn" data-term="60">60 Mo</div>
+                <div class="term-pill-btn" data-term="72">72 Mo</div>
+                <div class="term-pill-btn" data-term="84">84 Mo</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calculated Results -->
+          <div class="col-lg-5">
+            <div class="calculator-results-card">
+              <div>
+                <span class="text-muted small fw-semibold text-uppercase letter-spacing-1">Estimated Monthly Obligation</span>
+                <div class="display-6 font-heading fw-bold text-primary mt-1 mb-3 calc-output-monthly">$6,074</div>
+
+                <div class="border-top pt-3">
+                  <div class="d-flex justify-content-between small text-muted mb-2">
+                    <span>Total Estimated Outlay:</span>
+                    <strong class="text-heading num-tabular calc-output-total">$291,552</strong>
+                  </div>
+                  <div class="d-flex justify-content-between small text-muted mb-3">
+                    <span>Total Estimated Interest:</span>
+                    <strong class="text-heading num-tabular calc-output-interest">$41,552</strong>
+                  </div>
+                </div>
+
+                <!-- Breakdown Bar -->
+                <div class="payment-breakdown-bar">
+                  <div class="breakdown-principal" style="width: 86%;"></div>
+                  <div class="breakdown-interest" style="width: 14%;"></div>
+                </div>
+                <div class="d-flex justify-content-between small text-muted" style="font-size: 0.75rem;">
+                  <span>Principal: <strong class="calc-text-principal">86%</strong></span>
+                  <span>Interest: <strong class="calc-text-interest">14%</strong></span>
+                </div>
+              </div>
+
+              <div>
+                <div class="calculator-disclaimer">
+                  *Illustrative calculation only. Actual financing terms, interest rates, and loan structures depend upon formal underwriter assessment.
+                </div>
+                <a href="contact.html" class="btn btn-primary btn-sm w-100 mt-3">
+                  Proceed With This Estimate
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS FINANCING PROCESS TIMELINE (5 STAGES) -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 720px;">
+        <span class="badge-tag mb-2">Structured Advisory</span>
+        <h2 class="mb-3">Five Stages of Commercial Brokerage</h2>
+        <p class="text-muted">
+          We maintain transparency at every checkpoint. Each stage is managed to respect executive time and business privacy.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Stage 01 -->
+        <div class="col-md">
+          <div class="p-3 border rounded-3 bg-surface h-100">
+            <span class="badge bg-secondary mb-2">Stage 01</span>
+            <h6 class="fw-bold">Discovery</h6>
+            <p class="text-muted small mb-0">Initial consultation regarding capital objectives and target equipment.</p>
+          </div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div class="col-md">
+          <div class="p-3 border rounded-3 bg-surface h-100">
+            <span class="badge bg-secondary mb-2">Stage 02</span>
+            <h6 class="fw-bold">Application</h6>
+            <p class="text-muted small mb-0">Submission of standard commercial package, invoice quotes, or revenue filings.</p>
+          </div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div class="col-md">
+          <div class="p-3 border rounded-3 bg-surface h-100">
+            <span class="badge bg-secondary mb-2">Stage 03</span>
+            <h6 class="fw-bold">Financing Review</h6>
+            <p class="text-muted small mb-0">Broker evaluation across network lenders for pricing and term viability.</p>
+          </div>
+        </div>
+
+        <!-- Stage 04 -->
+        <div class="col-md">
+          <div class="p-3 border rounded-3 bg-surface h-100">
+            <span class="badge bg-secondary mb-2">Stage 04</span>
+            <h6 class="fw-bold">Option Selection</h6>
+            <p class="text-muted small mb-0">Side-by-side presentation of offers; selection of optimal financing agreement.</p>
+          </div>
+        </div>
+
+        <!-- Stage 05 -->
+        <div class="col-md">
+          <div class="p-3 border rounded-3 bg-surface h-100">
+            <span class="badge bg-primary mb-2">Stage 05</span>
+            <h6 class="fw-bold">Funding</h6>
+            <p class="text-muted small mb-0">Final document execution and capital disbursement to vendor or bank.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 small text-muted">
+        *Progress through each stage depends on individual borrower eligibility and participating lender underwriting criteria.
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME 2 FINAL CTA -->
+  <section class="py-5 bg-dark text-white" style="background: #0B192C !important; border-top: 1px solid #1E2E42;">
+    <div class="container py-5 text-center">
+      <div class="max-w-700 mx-auto" style="max-width: 760px;">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill text-uppercase mb-3">Executive Action</span>
+        <h2 class="display-6 fw-bold mb-3 text-white">Build Your Next Business Move With the Right Financing Strategy.</h2>
+        <p class="lead text-light mb-4" style="color: #CBD5E1 !important;">
+          Schedule an initial confidential consultation with a senior commercial finance broker today.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="financing.html" class="btn btn-primary btn-lg px-4">
+            <i class="bi bi-grid-3x3-gap"></i> Explore Financing
+          </a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+            <i class="bi bi-chat-left-text"></i> Speak With an Advisor
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDATORY FOOTER -->
+          <footer class="cf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+              <rect width="40" height="40" rx="10" fill="#0B192C"/>
+              <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+            </svg>
+            <span>CAPITAL<span class="text-primary">FORGE</span></span>
+          </a>
+          <p class="small text-muted mb-3" style="max-width: 320px;">
+            CapitalForge Finance is an independent commercial financing brokerage partner helping growing enterprises explore equipment loans, working capital, and flexible lines of credit.
+          </p>
+          <div class="d-flex gap-3 text-body">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Financing</h5>
+          <ul class="list-unstyled">
+            <li><a href="equipment-financing.html">Equipment Financing</a></li>
+            <li><a href="equipment-loans.html">Equipment Loans</a></li>
+            <li><a href="working-capital.html">Working Capital</a></li>
+            <li><a href="business-line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-financing.html">Commercial Financing</a></li>
+            <li><a href="financing.html">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="funding-process.html">How It Works</a></li>
+            <li><a href="loan-calculator.html">Loan Calculator</a></li>
+            <li><a href="solutions.html">Growth Solutions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="documentation/index.html">Template Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 100 Financial Plaza, Suite 1400, New York, NY 10005</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i> (800) 555-0199</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> info@capitalforgefinance.demo</li>
+            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM EST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box mt-4">
+        <strong>Commercial Brokerage Disclosure:</strong> Financing availability, rates, fees, terms, and eligibility are subject to lender criteria and may vary. CapitalForge Finance is an independent financing broker connecting business borrowers with potential commercial funding sources. We are not a direct lender, chartered bank, or government agency.
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>&copy; 2026 CapitalForge Finance. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-md-0 small">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclosures</a>
+          <a href="dashboard.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

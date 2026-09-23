@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore revolving business lines of credit: how revolving capital reserves work, draw mechanics, variable interest considerations, and enterprise qualification factors.">
+  <title>Business Line of Credit | CapitalForge Finance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand-logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mandatory Sticky Navbar -->
+            <header class="cf-header">
+    <nav class="navbar navbar-expand-xl py-3" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand-logo" href="index.html">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+            <rect width="40" height="40" rx="10" fill="#0B192C"/>
+            <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+          </svg>
+          <span>CAPITAL<span class="text-primary">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Controls: Only Hamburger Menu in Header (RTL, Theme & Sign Up inside Menu Drawer) -->
+        <div class="d-flex align-items-center d-xl-none ms-auto">
+          <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-heading"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse d-none d-xl-flex">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
+              </ul>
+            </li>
+
+            <!-- Direct Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="financing.html">Financing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="loan-calculator.html">Loan Calculator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="funding-process.html">How It Works</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Area: RTL Toggle, Theme Toggle & Sign Up Button -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="signup.html" class="btn btn-primary btn-sm px-3">
+              <i class="bi bi-person-plus me-1"></i> Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Exact match to Navbar menus + All Controls inside) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand-logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
+          <rect width="40" height="40" rx="10" fill="#0B192C"/>
+          <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+        </svg>
+        <span>CAPITAL<span class="text-primary">FORGE</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="accordion accordion-flush" id="mobileNavAccordion">
+          
+          <!-- Home Accordion Item matching Home Dropdown -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileHome">
+              <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
+                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+              </button>
+            </h2>
+            <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
+              <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
+                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <div class="d-flex flex-column gap-1 pt-1">
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
+      <div class="pt-3 border-top mt-auto">
+        <div class="mb-3">
+          <a href="signup.html" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus"></i> Sign Up
+          </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-1">
+          <span class="small text-muted fw-semibold">Controls</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="rtl-toggle-btn" aria-label="Toggle RTL or LTR layout" title="Toggle RTL/LTR">RTL</button>
+            <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="py-5 bg-subtle border-bottom">
+    <div class="container py-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="financing.html">Financing</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Business Line of Credit</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge-tag tag-teal mb-2">Revolving Capital Reserve</span>
+          <h1 class="display-5 fw-bold mb-3">Commercial Business Line of Credit</h1>
+          <p class="lead text-muted mb-0">
+            Establish a revolving capital facility to draw on demand. Pay interest solely on what you borrow, repay at your pace, and replenish your available limit for ongoing enterprise security.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-right-circle"></i> Inquire About Credit Lines
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        
+        <div class="col-lg-8">
+          
+          <div class="mb-5">
+            <h2 class="fw-bold mb-3">The Revolving Capital Access Concept</h2>
+            <p>
+              Unlike a closed-end installment loan where you receive a single lump sum and must pay interest on the full balance from day one, a commercial business line of credit works as an active, revolving facility. Once established with a maximum credit ceiling (e.g., $150,000), you can draw $25,000 today, repay it over three months, and have the full $150,000 available again for future opportunities.
+            </p>
+            <p>
+              Interest accrues strictly on the outstanding balance you have drawn. If your line sits idle at $0 drawn balance, no interest is billed, making it an ideal liquidity reserve against unforeseen market disruptions.
+            </p>
+          </div>
+
+          <!-- Use Cases & Draw Considerations -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-wallet2 me-2"></i> Common Strategic Uses</h5>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>Supplier Cash Discounts:</strong> Seize 2%–5% early-pay supplier discounts.</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>Emergency Repairs:</strong> Rapidly fix broken machinery without waiting on loans.</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>Receivables Bridge:</strong> Fund operations during 60-day client billing delays.</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> <strong>Short Project Outlays:</strong> Mobilize job sites prior to first client milestone billing.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 border bg-surface h-100">
+                <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-arrow-repeat me-2"></i> Draw &amp; Repayment Mechanics</h5>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check2 text-success me-2"></i> <strong>On-Demand Draws:</strong> Initiate draws into checking via portal wire or ACH.</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> <strong>Interest-Only Periods:</strong> Some lines offer interest-only monthly draws during initial use.</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> <strong>Replenishment:</strong> Principal payments instantly restore your available borrowing limit.</li>
+                  <li><i class="bi bi-check2 text-success me-2"></i> <strong>Renewal Cycles:</strong> Typical facilities renew annually subject to account review.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost and Terms Variation Warning -->
+          <div class="p-4 rounded-3 border bg-subtle mb-5">
+            <h5 class="fw-bold mb-2"><i class="bi bi-exclamation-circle text-warning me-2"></i> Costs and Terms That May Vary</h5>
+            <p class="small text-muted mb-2">
+              Credit line pricing is dynamic and subject to independent lender criteria. Variables to consider include:
+            </p>
+            <ul class="small text-muted mb-0">
+              <li><strong>Draw Fees:</strong> Some lenders charge 1% to 2% on each draw transaction.</li>
+              <li><strong>Annual Maintenance Fees:</strong> Facilities may carry nominal annual account fees.</li>
+              <li><strong>Prime Rate Adjustments:</strong> Many commercial lines utilize a floating rate indexed to the Wall Street Journal Prime Rate plus a margin.</li>
+            </ul>
+          </div>
+
+          <!-- Qualification Factors -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Enterprise Qualification Factors</h3>
+            <p class="text-muted">
+              Lenders evaluate specific criteria to determine line limits and rate margins:
+            </p>
+            <div class="row g-3 small">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">Operating Track Record</strong>
+                  <span class="text-muted">Minimum 12 to 24 months of verified active business history.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">Consistent Gross Revenue</strong>
+                  <span class="text-muted">Typical threshold of $25,000+ monthly deposits with healthy average daily balance.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">Commercial Debt Ratio</strong>
+                  <span class="text-muted">Existing active liens and debt obligations relative to net operating income.</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border">
+                  <strong class="d-block mb-1 text-heading">Business Credit Profile</strong>
+                  <span class="text-muted">Dun &amp; Bradstreet, PayNet, and principal guarantor credit standing.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">Line of Credit FAQs</h3>
+            <div class="accordion accordion-cf" id="locFaqs">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#loc1">
+                    Is every applicant guaranteed to receive a revolving credit line?
+                  </button>
+                </h2>
+                <div id="loc1" class="accordion-collapse collapse show" data-bs-parent="#locFaqs">
+                  <div class="accordion-body small text-muted">
+                    No. Approval for revolving credit lines is strictly subject to lender underwriting, bank cash flow analysis, and credit criteria. If a business does not currently meet credit line standards, alternative structures like secured equipment loans or working capital advances may be explored.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loc2">
+                    Do I pay interest if I have a $100K line but draw $0?
+                  </button>
+                </h2>
+                <div id="loc2" class="accordion-collapse collapse" data-bs-parent="#locFaqs">
+                  <div class="accordion-body small text-muted">
+                    No. Interest is calculated solely on your active drawn balance. An undrawn credit line acts as a zero-interest liquidity cushion until funds are accessed.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loc3">
+                    Can credit lines be converted to term loans?
+                  </button>
+                </h2>
+                <div id="loc3" class="accordion-collapse collapse" data-bs-parent="#locFaqs">
+                  <div class="accordion-body small text-muted">
+                    Some participating institutions offer lines that include a term-out option, allowing drawn balances to convert into fixed-amortization loans over 24 to 36 months if desired.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="calculator-results-card mb-4">
+              <span class="badge bg-info text-dark mb-2 fw-bold">Revolving Facility</span>
+              <h4 class="fw-bold mb-2">Establish Your Credit Line</h4>
+              <p class="small text-muted mb-4">
+                Explore credit line limits from $25,000 to $500,000+ with commercial lenders.
+              </p>
+              <a href="contact.html" class="btn btn-primary w-100 mb-2">
+                <i class="bi bi-arrow-right-circle"></i> Inquire for Credit Line
+              </a>
+              <a href="loan-calculator.html" class="btn btn-outline-custom w-100 small">
+                <i class="bi bi-calculator"></i> Simulate Payment Scenarios
+              </a>
+            </div>
+
+            <div class="p-4 rounded-4 border bg-surface">
+              <h5 class="fw-bold mb-3">Other Capital Options</h5>
+              <div class="d-flex flex-column gap-2 small">
+                <a href="working-capital.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Working Capital</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="equipment-financing.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Equipment Financing</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+                <a href="commercial-financing.html" class="p-2 rounded bg-muted text-heading d-flex justify-content-between">
+                  <span>Commercial Financing</span><i class="bi bi-chevron-right text-muted"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDATORY FOOTER -->
+          <footer class="cf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
+              <rect width="40" height="40" rx="10" fill="#0B192C"/>
+              <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
+            </svg>
+            <span>CAPITAL<span class="text-primary">FORGE</span></span>
+          </a>
+          <p class="small text-muted mb-3" style="max-width: 320px;">
+            CapitalForge Finance is an independent commercial financing brokerage partner helping growing enterprises explore equipment loans, working capital, and flexible lines of credit.
+          </p>
+          <div class="d-flex gap-3 text-body">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Financing</h5>
+          <ul class="list-unstyled">
+            <li><a href="equipment-financing.html">Equipment Financing</a></li>
+            <li><a href="equipment-loans.html">Equipment Loans</a></li>
+            <li><a href="working-capital.html">Working Capital</a></li>
+            <li><a href="business-line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-financing.html">Commercial Financing</a></li>
+            <li><a href="financing.html">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="funding-process.html">How It Works</a></li>
+            <li><a href="loan-calculator.html">Loan Calculator</a></li>
+            <li><a href="solutions.html">Growth Solutions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="documentation/index.html">Template Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 100 Financial Plaza, Suite 1400, New York, NY 10005</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i> (800) 555-0199</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary me-2"></i> info@capitalforgefinance.demo</li>
+            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM EST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box mt-4">
+        <strong>Commercial Brokerage Disclosure:</strong> Financing availability, rates, fees, terms, and eligibility are subject to lender criteria and may vary. CapitalForge Finance is an independent financing broker connecting business borrowers with potential commercial funding sources. We are not a direct lender, chartered bank, or government agency.
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>&copy; 2026 CapitalForge Finance. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-md-0 small">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclosures</a>
+          <a href="dashboard.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
