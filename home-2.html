@@ -46,7 +46,7 @@
         <div class="collapse navbar-collapse d-none d-xl-flex">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-center">
             
-            <!-- Home Dropdown -->
+            <!-- Home Dropdown --            <!-- Home Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
@@ -55,6 +55,11 @@
                 <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
                 <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
               </ul>
+            </li>
+
+            <!-- About Link Next to Home -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
 
             <!-- Direct Links -->
@@ -72,10 +77,6 @@
 
             <li class="nav-item">
               <a class="nav-link" href="funding-process.html">How It Works</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
             </li>
 
             <li class="nav-item">
@@ -124,29 +125,29 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingMobileHome">
               <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
-                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+                <span>Home</span>
               </button>
             </h2>
             <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
               <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
-                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
-                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+                <a href="index.html" class="nav-link py-1">Home</a>
+                <a href="home-2.html" class="nav-link py-1">Home 2 (Executive)</a>
               </div>
             </div>
           </div>
 
-          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <!-- Direct Links matching desktop Navbar exactly in order and names (No Icons in Menu Links) -->
           <div class="d-flex flex-column gap-1 pt-1">
-            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
-            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
-            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
-            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
-            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
-            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
-            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center">About</a>
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center">Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center">Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center">Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center">How It Works</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center">Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center">Dashboard</a>
           </div>
         </div>
-      </div>
+      </div>v>
 
       <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
       <div class="pt-3 border-top mt-auto">
@@ -453,7 +454,7 @@
         <!-- Pillar 1: Equipment Financing -->
         <div class="col-lg-6">
           <div class="p-4 p-md-5 rounded-4 border bg-surface h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
-            <div class="position-absolute top-0 end-0 p-3 opacity-10">
+            <div class="position-absolute top-0 end-0 p-3 opacity-10 pillar-watermark-icon">
               <i class="bi bi-truck display-1 text-primary"></i>
             </div>
             <div>
@@ -481,7 +482,7 @@
         <!-- Pillar 2: Growth Capital -->
         <div class="col-lg-6">
           <div class="p-4 p-md-5 rounded-4 border h-100 d-flex flex-column justify-content-between position-relative overflow-hidden" style="background: var(--cf-card-gradient);">
-            <div class="position-absolute top-0 end-0 p-3 opacity-10">
+            <div class="position-absolute top-0 end-0 p-3 opacity-10 pillar-watermark-icon">
               <i class="bi bi-rocket-takeoff display-1 text-success"></i>
             </div>
             <div>
@@ -629,9 +630,9 @@
         </p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <!-- Stage 01 -->
-        <div class="col-md">
+        <div class="col-12 col-md-6 col-lg">
           <div class="p-3 border rounded-3 bg-surface h-100">
             <span class="badge bg-secondary mb-2">Stage 01</span>
             <h6 class="fw-bold">Discovery</h6>
@@ -640,7 +641,7 @@
         </div>
 
         <!-- Stage 02 -->
-        <div class="col-md">
+        <div class="col-12 col-md-6 col-lg">
           <div class="p-3 border rounded-3 bg-surface h-100">
             <span class="badge bg-secondary mb-2">Stage 02</span>
             <h6 class="fw-bold">Application</h6>
@@ -649,7 +650,7 @@
         </div>
 
         <!-- Stage 03 -->
-        <div class="col-md">
+        <div class="col-12 col-md-6 col-lg">
           <div class="p-3 border rounded-3 bg-surface h-100">
             <span class="badge bg-secondary mb-2">Stage 03</span>
             <h6 class="fw-bold">Financing Review</h6>
@@ -658,7 +659,7 @@
         </div>
 
         <!-- Stage 04 -->
-        <div class="col-md">
+        <div class="col-12 col-md-6 col-lg">
           <div class="p-3 border rounded-3 bg-surface h-100">
             <span class="badge bg-secondary mb-2">Stage 04</span>
             <h6 class="fw-bold">Option Selection</h6>
@@ -667,7 +668,7 @@
         </div>
 
         <!-- Stage 05 -->
-        <div class="col-md">
+        <div class="col-12 col-md-6 col-lg">
           <div class="p-3 border rounded-3 bg-surface h-100">
             <span class="badge bg-primary mb-2">Stage 05</span>
             <h6 class="fw-bold">Funding</h6>
@@ -691,7 +692,7 @@
         <p class="lead text-light mb-4" style="color: #CBD5E1 !important;">
           Schedule an initial confidential consultation with a senior commercial finance broker today.
         </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 prefooter-cta-group">
           <a href="financing.html" class="btn btn-primary btn-lg px-4">
             <i class="bi bi-grid-3x3-gap"></i> Explore Financing
           </a>

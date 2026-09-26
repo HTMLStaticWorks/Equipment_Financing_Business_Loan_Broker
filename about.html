@@ -46,11 +46,20 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
+              </a            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
               </a>
               <ul class="dropdown-menu shadow" aria-labelledby="homeDropdown">
                 <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door me-2 text-primary"></i> Home</a></li>
                 <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a></li>
               </ul>
+            </li>
+
+            <!-- About Link Next to Home -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
 
             <!-- Direct Links -->
@@ -68,10 +77,6 @@
 
             <li class="nav-item">
               <a class="nav-link" href="funding-process.html">How It Works</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
             </li>
 
             <li class="nav-item">
@@ -120,29 +125,29 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingMobileHome">
               <button class="accordion-button collapsed py-2 px-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileHome" aria-expanded="false" aria-controls="collapseMobileHome">
-                <span><i class="bi bi-house-door me-2 text-primary"></i> Home</span>
+                <span>Home</span>
               </button>
             </h2>
             <div id="collapseMobileHome" class="accordion-collapse collapse" aria-labelledby="headingMobileHome" data-bs-parent="#mobileNavAccordion">
               <div class="accordion-body py-2 ps-4 d-flex flex-column gap-2">
-                <a href="index.html" class="nav-link py-1"><i class="bi bi-house me-2 text-primary"></i> Home</a>
-                <a href="home-2.html" class="nav-link py-1"><i class="bi bi-briefcase me-2 text-primary"></i> Home 2 (Executive)</a>
+                <a href="index.html" class="nav-link py-1">Home</a>
+                <a href="home-2.html" class="nav-link py-1">Home 2 (Executive)</a>
               </div>
             </div>
           </div>
 
-          <!-- Direct Links matching desktop Navbar exactly in order and names -->
+          <!-- Direct Links matching desktop Navbar exactly in order and names (No Icons in Menu Links) -->
           <div class="d-flex flex-column gap-1 pt-1">
-            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i> Financing</a>
-            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-rocket-takeoff me-2 text-primary"></i> Solutions</a>
-            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-calculator me-2 text-primary"></i> Loan Calculator</a>
-            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-arrow-repeat me-2 text-primary"></i> How It Works</a>
-            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-info-circle me-2 text-primary"></i> About</a>
-            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-envelope me-2 text-primary"></i> Contact</a>
-            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center"><i class="bi bi-speedometer2 me-2 text-primary"></i> Dashboard</a>
+            <a href="about.html" class="nav-link py-2 px-1 d-flex align-items-center">About</a>
+            <a href="financing.html" class="nav-link py-2 px-1 d-flex align-items-center">Financing</a>
+            <a href="solutions.html" class="nav-link py-2 px-1 d-flex align-items-center">Solutions</a>
+            <a href="loan-calculator.html" class="nav-link py-2 px-1 d-flex align-items-center">Loan Calculator</a>
+            <a href="funding-process.html" class="nav-link py-2 px-1 d-flex align-items-center">How It Works</a>
+            <a href="contact.html" class="nav-link py-2 px-1 d-flex align-items-center">Contact</a>
+            <a href="dashboard.html" class="nav-link py-2 px-1 d-flex align-items-center">Dashboard</a>
           </div>
         </div>
-      </div>
+      </div>v>
 
       <!-- Action Area Inside Menu Page: Sign Up, RTL & Theme Toggle Buttons -->
       <div class="pt-3 border-top mt-auto">
@@ -260,7 +265,7 @@
         <!-- Advisor 1 -->
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 border text-center p-3 rounded-4 bg-surface shadow-sm">
-            <img src="assets/images/team/team-1.jpg" alt="Marcus Vance - Managing Principal" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="assets/images/team/team-1.jpg" alt="Marcus Vance - Managing Principal" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 260px; object-fit: cover; object-position: top center;">
             <h5 class="fw-bold mb-1">Marcus Vance</h5>
             <span class="text-primary small fw-semibold d-block mb-2">Managing Principal</span>
             <p class="text-muted small mb-0">Specializes in heavy construction equipment debt and multi-tier institutional credit facilities.</p>
@@ -270,7 +275,7 @@
         <!-- Advisor 2 -->
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 border text-center p-3 rounded-4 bg-surface shadow-sm">
-            <img src="assets/images/team/team-2.jpg" alt="Elena Rostova - VP Equipment Underwriting" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="assets/images/team/team-2.jpg" alt="Elena Rostova - VP Equipment Underwriting" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 260px; object-fit: cover; object-position: top center;">
             <h5 class="fw-bold mb-1">Elena Rostova</h5>
             <span class="text-primary small fw-semibold d-block mb-2">VP, Commercial Equipment</span>
             <p class="text-muted small mb-0">Advises manufacturing, logistics fleets, and healthcare practices on equipment leasing structures.</p>
@@ -280,7 +285,7 @@
         <!-- Advisor 3 -->
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 border text-center p-3 rounded-4 bg-surface shadow-sm">
-            <img src="assets/images/team/team-3.jpg" alt="David Sterling - Head of Working Capital" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="assets/images/team/team-3.jpg" alt="David Sterling - Head of Working Capital" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 260px; object-fit: cover; object-position: top center;">
             <h5 class="fw-bold mb-1">David Sterling</h5>
             <span class="text-primary small fw-semibold d-block mb-2">Director of Working Capital</span>
             <p class="text-muted small mb-0">Coordinates non-bank working capital facilities, factoring lines, and receivables smoothing solutions.</p>
@@ -290,7 +295,7 @@
         <!-- Advisor 4 -->
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 border text-center p-3 rounded-4 bg-surface shadow-sm">
-            <img src="assets/images/team/team-4.jpg" alt="Sarah Chen - Commercial Financing Advisor" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="assets/images/team/team-4.jpg" alt="Sarah Chen - Commercial Financing Advisor" class="rounded-3 mb-3 mx-auto" style="width: 100%; height: 260px; object-fit: cover; object-position: top center;">
             <h5 class="fw-bold mb-1">Sarah Chen</h5>
             <span class="text-primary small fw-semibold d-block mb-2">Senior Commercial Advisor</span>
             <p class="text-muted small mb-0">Assists scaling mid-market enterprises with warehouse improvements, debt consolidation, and credit lines.</p>
