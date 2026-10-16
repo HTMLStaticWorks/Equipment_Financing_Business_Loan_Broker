@@ -25,7 +25,7 @@
           <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
             <rect width="40" height="40" rx="10" fill="#0B192C"/>
             <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28 L20 22 L24 28" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
           </svg>
           <span>CAPITAL<span class="text-primary">FORGE</span></span>
@@ -105,7 +105,7 @@
         <svg width="28" height="28" viewBox="0 0 40 40" fill="none" class="me-1">
           <rect width="40" height="40" rx="10" fill="#0B192C"/>
           <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 28 L20 22 L24 28" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
         </svg>
         <span>CAPITAL<span class="text-primary">FORGE</span></span>
@@ -175,17 +175,25 @@
         </ol>
       </nav>
       <div class="row align-items-center g-4">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
           <span class="badge-tag mb-2">Hard Asset Procurement</span>
           <h1 class="display-5 fw-bold mb-3">Commercial Equipment Financing</h1>
           <p class="lead text-muted mb-0">
-            Secure the machinery, vehicles, medical hardware, and commercial technology required to operate and scale — structured so the equipment itself acts as the primary loan security.
+            Secure the machinery, vehicles, medical hardware, and commercial technology required to operate and scale — structured so the equipment itself acts as primary loan security.
           </p>
         </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="contact.html" class="btn btn-primary btn-lg">
-            <i class="bi bi-arrow-right-circle"></i> Inquire About Equipment
-          </a>
+        <div class="col-lg-5 text-lg-end">
+          <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="bi bi-file-earmark-text me-1"></i> Submit Vendor Quote
+            </a>
+            <a href="loan-calculator.html" class="btn btn-outline-custom">
+              <i class="bi bi-calculator me-1"></i> Payment Calculator
+            </a>
+          </div>
+          <div class="small text-muted mt-2">
+            <i class="bi bi-shield-check text-success me-1"></i> Approvals in 24–48h &bull; 0% Down Options
+          </div>
         </div>
       </div>
     </div>
@@ -218,67 +226,73 @@
 
             <div class="row g-3">
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/construction.jpg" alt="Construction Equipment" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/construction.jpg" alt="Construction Equipment" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Heavy Construction</strong>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Heavy Machinery</span>
+                    <strong class="d-block text-heading">Construction &amp; Earthmoving</strong>
                     <span class="text-muted small">Excavators, bulldozers, cranes &amp; loaders</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/manufacturing.jpg" alt="Manufacturing CNC Machine" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/manufacturing.jpg" alt="Manufacturing CNC Machine" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Industrial &amp; Tooling</strong>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Production</span>
+                    <strong class="d-block text-heading">Industrial &amp; Tooling</strong>
                     <span class="text-muted small">CNC machines, lathes &amp; robotic arms</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/medical.jpg" alt="Medical Diagnostic Systems" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/medical.jpg" alt="Medical Diagnostic Systems" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Healthcare &amp; Diagnostics</strong>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Healthcare</span>
+                    <strong class="d-block text-heading">Healthcare &amp; Diagnostics</strong>
                     <span class="text-muted small">MRI scanners, surgical lasers &amp; lab systems</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/transportation.jpg" alt="Commercial Fleet Trucks" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/transportation.jpg" alt="Commercial Fleet Trucks" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Commercial Transportation</strong>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Logistics</span>
+                    <strong class="d-block text-heading">Commercial Transportation</strong>
                     <span class="text-muted small">Class 8 trucks, box vans, trailers &amp; chassis</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/restaurant.jpg" alt="Commercial Kitchen Ovens" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/restaurant.jpg" alt="Commercial Kitchen Ovens" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Commercial Culinary</strong>
-                    <span class="text-muted small">Walk-in freezers, hood vents &amp; ranges</span>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Hospitality</span>
+                    <strong class="d-block text-heading">Commercial Culinary</strong>
+                    <span class="text-muted small">Walk-in freezers, hood vents, ranges &amp; ovens</span>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center">
-                  <img src="assets/images/equipment/technology.jpg" alt="Server Hardware and Technology" class="rounded-2" style="width: 70px; height: 60px; object-fit: cover;">
+                <div class="p-3 rounded-3 border bg-surface d-flex gap-3 align-items-center h-100">
+                  <img src="assets/images/equipment/technology.jpg" alt="Server Hardware and Technology" class="rounded-3 flex-shrink-0" style="width: 84px; height: 72px; object-fit: cover;">
                   <div>
-                    <strong class="d-block text-heading small">Enterprise Computing</strong>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0.5 rounded-pill mb-1">Technology</span>
+                    <strong class="d-block text-heading">Enterprise Computing</strong>
                     <span class="text-muted small">Rack servers, networking hubs &amp; telecoms</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="small text-muted mt-2">
-              *Not every asset category is universally eligible. Underwriting depends on market liquidity and asset condition.
+            <div class="small text-muted mt-3">
+              <i class="bi bi-info-circle me-1"></i> Not every asset category is universally eligible. Underwriting depends on market liquidity and asset condition.
             </div>
           </div>
 
@@ -413,7 +427,7 @@
             <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="me-1">
               <rect width="40" height="40" rx="10" fill="#0B192C"/>
               <path d="M12 28 L20 18 L28 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 28 L20 22 L24 28" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 28 L20 22 L24 28" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="20" cy="13" r="2.5" fill="#F59E0B"/>
             </svg>
             <span>CAPITAL<span class="text-primary">FORGE</span></span>
